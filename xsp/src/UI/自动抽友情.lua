@@ -1,0 +1,28 @@
+require("UI.Z_ui")
+local DevScreen={
+	Width=1920,
+	Height=1080,
+}
+local 主UI=UI:new(DevScreen,{align="left",w=80,h=80,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件.."友情.dat",xpos=2})
+local 自动抽友情=Page:new(主UI,{text="自动抽友情",size=20})
+自动抽友情:nextLine(1)
+自动抽友情:addLabel({text="自动抽友情",size=60,align="center",w=100,color="255,0,0"})
+自动抽友情:nextLine()
+自动抽友情:addLabel({text="--请先设置贩卖时为一排7个的最小状态",size=30,align="center",w=100,color="255,0,0"})
+自动抽友情:nextLine(2)
+自动抽友情:addLabel({text="选择卡池:",size=40,align="Left",color="0,0,0"})
+自动抽友情:addRadioGroup({id="卡池选择",list="友情池",select=0,size=30,w=80,h=10,color="0,0,0"})
+自动抽友情:nextLine()
+自动抽友情:addLabel({text="抽卡模式:",size=40,align="Left",color="0,0,0"})
+自动抽友情:addRadioGroup({id="抽卡模式",list="单抽,十连",select=0,size=30,w=80,h=10,color="0,0,0"})
+自动抽友情:nextLine()
+自动抽友情:addLabel({text="抽卡次数:",size=40,align="Left",color="0,0,0"})
+自动抽友情:addEdit({id="抽卡次数",prompt="这里输入需要刷的次数",text="30",kbtype="number",select="1",size=25,w=40,h=10,color="0,0,0"})
+自动抽友情:nextLine(1.5)
+自动抽友情:addLabel({text="满仓清理:",size=40,align="Left",color="0,0,0"})
+自动抽友情:addCheckBoxGroup({id="清理从者开关",list="清理从者",select="10",size=30,w=15,h=10,color="0,0,0"})
+自动抽友情:addCheckBoxGroup({id="清理礼装开关",list="清理礼装",select="10",size=30,w=15,h=10,color="0,0,0"})
+自动抽友情:nextLine()
+自动抽友情:addLabel({text="清理从者设置:",size=40,align="Left",color="0,0,0"})
+自动抽友情:addComboBox({id="从者清理",list="铜,铜+银",select=1,size=30,w=20,h=10})
+return 主UI:show(1)

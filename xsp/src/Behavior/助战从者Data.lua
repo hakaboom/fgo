@@ -1,0 +1,145 @@
+local Data={}	--"梅林,诸葛孔明,玉藻前,拉二,德雷克"
+Data.梅林={
+	{x=186,y=454,color=0xfad9d9},
+	{x=88,y=494,color=0x739ddf},
+	{x=268,y=414,color=0xf6f1f6},
+	{x=302,y=398,color=0xeddaeb},
+	{x=243,y=480,color=0xfffeff},
+	{x=181,y=478,color=0xf9d7d8},
+	{x=118,y=410,color=0xc8afd8},
+	MainPoint={x=71,y=335}
+}
+Data.诸葛孔明={
+	{x=196,y=687,color=0xfdf0cf},
+	{x=299,y=668,color=0x8ef9e9},
+	{x=88,y=712,color=0xbaf4db},
+	{x=88,y=761,color=0xa3f5ed},
+	{x=140,y=776,color=0x2c3d2c},
+	{x=297,y=712,color=0xd3954f},
+	{x=127,y=678,color=0x272f2f},
+	MainPoint={x=71,y=592},
+}
+Data.玉藻前={
+	{x=195,y=468,color=0xfae2c9},
+	{x=121,y=472,color=0xe89180},
+	{x=123,y=419,color=0xef8e7f},
+	{x=173,y=476,color=0xf4dbba},
+	{x=246,y=407,color=0xed9282},
+	{x=85,y=470,color=0xaf8d41},
+	MainPoint={x=71,y=343},
+}
+Data.拉二={
+	{x=293,y=768,color=0x154fb2},
+	{x=202,y=783,color=0xe5b382},
+	{x=97,y=805,color=0x0a4caf},
+	{x=117,y=835,color=0x1661bb},
+	{x=167,y=744,color=0x4d3b2b},
+	{x=141,y=696,color=0x473f2a},
+	MainPoint={x=71,y=678},
+}
+Data.德雷克={
+	{x=178,y=414,color=0xf7d6c6},
+	{x=138,y=411,color=0xed4893},
+	{x=86,y=435,color=0x5991ad},
+	{x=269,y=408,color=0xafa79e},
+	{x=302,y=379,color=0xff6d96},
+	{x=154,y=340,color=0x796950},
+	{x=170,y=467,color=0x392323},
+	MainPoint={x=71,y=290},
+}
+Data.花嫁尼禄={
+	{x=197,y=416,color=0xfff1e0},
+	{x=168,y=412,color=0xc8e576},
+	{x=170,y=448,color=0xa7a796},
+	{x=115,y=384,color=0xffebb9},
+	{x=168,y=375,color=0xf9e9bf},
+	MainPoint={x=71,y=292},
+}
+Data.闪闪={
+	{x=202,y=393,color=0xfdfdc4},
+	{x=231,y=404,color=0xdbb280},
+	{x=163,y=383,color=0xfff9d0},
+	{x=152,y=298,color=0xfff986},
+	{x=299,y=360,color=0x8e654c},
+	MainPoint={x=71,y=275},
+}
+Data.黑狗={
+	{x=213,y=400,color=0x96543b},
+	{x=154,y=311,color=0x584058},
+	{x=102,y=401,color=0x27161f},
+	{x=246,y=414,color=0x27161f},
+	{x=303,y=464,color=0x820016},
+	MainPoint={x=71,y=287},
+}
+Data.源赖光={
+	{x=195,y=407,color=0xf8e8e8},
+	{x=93,y=377,color=0xe9f1f1},
+	{x=295,y=354,color=0xedf5f5},
+	{x=301,y=389,color=0xbbeddc},
+	{x=123,y=443,color=0x2d2740},
+	{x=85,y=470,color=0x50161f},
+	MainPoint={x=71,y=292},
+}
+Data.宫本武藏={
+	{x=195,y=702,color=0xfdfdd4},
+	{x=259,y=662,color=0xffe9d8},
+	{x=101,y=731,color=0xfdeddc},
+	{x=257,y=712,color=0xff4b71},
+	{x=262,y=668,color=0xffe9d8},
+	{x=132,y=743,color=0x7e4444},
+	MainPoint={x=71,y=592},
+}
+Data.刑部姬={
+	{x=207,y=407,color=0xffe9e0},
+	{x=229,y=346,color=0xc192da},
+	{x=92,y=447,color=0xff9eb7},
+	{x=170,y=482,color=0xffffff},
+	{x=154,y=313,color=0xffffff},
+	{x=239,y=436,color=0x683a3a},
+	MainPoint={x=71,y=292},
+}
+Data.天草四郎={
+	{x=193,y=701,color=0xf1b78e},
+	{x=98,y=737,color=0xedd4b3},
+	{x=169,y=742,color=0x965c44},
+	{x=154,y=615,color=0xf5f5ed},
+	{x=302,y=686,color=0xf10a08},
+	MainPoint={x=71,y=592},
+}
+Data.弓凛={
+	{x=212,y=364,color=0xfdf5cc},
+	{x=185,y=412,color=0xfff9d0},
+	{x=159,y=446,color=0x2b020a},
+	{x=148,y=316,color=0x160e16},
+	{x=278,y=405,color=0xffffff},
+	{x=114,y=473,color=0xffd8b7},
+	MainPoint={x=71,y=292},
+}
+Data["小莫(Rider)"]={
+	{x=196,y=519,color=0xf1c8a7},
+	{x=241,y=547,color=0x9ef0e0},
+	{x=100,y=565,color=0xa6eddc},
+	{x=279,y=479,color=0xe7b68d},
+	{x=149,y=585,color=0x23231a},	
+	MainPoint={x=71,y=403},
+}
+Data["小莫(saber)"]={
+	{x=194,y=499,color=0xfceccb},
+	{x=101,y=566,color=0xf7efef},
+	{x=96,y=514,color=0xd0c8bf},
+	{x=214,y=577,color=0x991505},
+	{x=290,y=491,color=0x86868e},
+	{x=235,y=442,color=0xedd49a},
+	MainPoint={x=71,y=384},
+}
+Data["海伦娜(Caster)"]={
+	{x=197,y=582,color=0xfddccc},
+	{x=115,y=575,color=0xf3c2f3},
+	{x=274,y=585,color=0xd288ca},
+	{x=187,y=538,color=0xb260b2},
+	{x=201,y=616,color=0xdb7099},
+	{x=177,y=660,color=0x201728},
+	MainPoint={x=71,y=472},
+}
+
+return Data
