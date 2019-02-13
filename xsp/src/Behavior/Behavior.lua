@@ -6,33 +6,33 @@ local tbl=require("Behavior.Data")
 
 function Behavior.AP回复(index)
 	local 金苹果,银苹果=point:new({x=1090,y=445,color=0xf1e9d8}),point:new({x=1090,y=660,color=0xf1e9d8})
-	local 铜苹果,圣晶石=point:new({x=1090,y=710,color=0xf1e9d8}),point:new({x=1090,y=220,color=0xf1e9d8})
-	local 下滑={point:new({x=986,y=550}),point:new({x=990,y=250})}
+	local 铜苹果,圣晶石=point:new({x=932,y=848,color=0xf4ecdb}),point:new({x=1090,y=220,color=0xf1e9d8})
+--	local 下滑={point:new({x=986,y=550}),point:new({x=990,y=250})}
 	if index=="不补充体力" then  print("不补充体力") lua_exit()
 	elseif index=="金苹果" then
 		if 金苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="银苹果" then
 		if 银苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="铜苹果" then
-		Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1)
+--		Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1)
 		if 铜苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="铜+银苹果" then
 		if 银苹果:getandCmpColor(true) then
 			else
-			Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1) 
+--			Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1) 
 			if 铜苹果:getandCmpColor(true) then else lua_exit() end
 		end
 	elseif index=="圣晶石" then
 		if 圣晶石:getandCmpColor(true) then else lua_exit() end
-	elseif index=="挂机等待60分钟" then slp(60*60)
-	elseif index=="挂机等待120分钟"	then slp(120*60)
+	elseif index=="挂机等待60分钟" then for i=1,60*30 do slp(2) end
+	elseif index=="挂机等待120分钟"	then for i=1,60*60 do slp(2) end
 	end
 	slp(2.5)
 	point:new({x=1156,y=832}):Click(1)
 end
 
 function Behavior.选择助战()
-local 从者data,礼装data=require("Behavior.助战从者Data"),require("Behavior.助战礼装data")
+	local 从者data,礼装data=require("Behavior.助战从者Data"),require("Behavior.助战礼装data")
 	local function 下滑距离()
 		local x=point:new({x=960,y=0})
 		local 一号位Y=multiPoint:new({Area={1232,248,1491,506},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
@@ -98,7 +98,7 @@ local 从者data,礼装data=require("Behavior.助战从者Data"),require("Behavi
 		elseif 无符合是否更新=="更新两次助战" then 列表更新次数=2 
 		elseif 无符合是否更新=="更新三次助战" then 列表更新次数=3
 	end
---	Print("礼装选择:"..礼装选择,"从者选择:"..从者选择,"列表更新次数:"..列表更新次数,"助战选择优先级:"..助战选择优先级)
+	--	Print("礼装选择:"..礼装选择,"从者选择:"..从者选择,"列表更新次数:"..列表更新次数,"助战选择优先级:"..助战选择优先级)
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	if     从者选择=="列表第一个" then 列表位置[1]:Click(0.5) return 
 	elseif 从者选择=="列表第二个" then 列表位置[2]:Click(0.5) return 
@@ -300,7 +300,6 @@ function Behavior.释放技能(index)
 end
 
 function Behavior.释放宝具(index,bool)
-print('释放宝具')
 	local 宝具释放=MainConfig[index.."宝具选择"];释放顺序策略=MainConfig[index.."宝具释放顺序"];local 循环释放=MainConfig[index.."宝具循环释放"]
 	if not 宝具释放 then print('未选择宝具') return end
 	local tbl={[123]={1,2,3},[213]={2,1,3},[321]={3,2,1},[132]={1,3,2},[312]={3,1,2}}
@@ -546,7 +545,6 @@ function Behavior.贩卖(策略,nowfunction)
 						Tbl[i]="金"
 						break
 					end
---					Tbl[i]=Tbl[#Tbl-1]
 				end
 			end
 		_K:keepScreen(false)
@@ -587,31 +585,31 @@ function Behavior.贩卖(策略,nowfunction)
 end
 
 function Behavior.使用道具()
-local 策略=MainConfig["活动加成道具选择"]
-local 道具={
-	勇者之剑=point:new({x=1037,y=260,color=0x625e58}),勇者之枪=point:new({x=1051,y=495,color=0x625e58}),
-	勇者之弓=point:new({x=1017,y=715,color=0xf4ecdb}),勇者披风=point:new({x=1037,y=498,color=0x625e58}),
-	勇者之盾=point:new({x=1037,y=720,color=0x625e58}),开关=point:new({x=1628,y=136,color=0x119dfe})
-	}
-local 下滑={point:new({x=1000,y=650}),point:new({x=1000,y=250})}
-slp(0.1)
-if 道具.开关:getandCmpColor("开关") then 道具.开关:Click() end 
-	if 策略=="不选择" then
+	local 策略=MainConfig["活动加成道具选择"]
+	local 道具={
+		勇者之剑=point:new({x=1037,y=260,color=0x625e58}),勇者之枪=point:new({x=1051,y=495,color=0x625e58}),
+		勇者之弓=point:new({x=1017,y=715,color=0xf4ecdb}),勇者披风=point:new({x=1037,y=498,color=0x625e58}),
+		勇者之盾=point:new({x=1037,y=720,color=0x625e58}),开关=point:new({x=1628,y=136,color=0x119dfe})
+		}
+	local 下滑={point:new({x=1000,y=650}),point:new({x=1000,y=250})}
+	slp(0.1)
+	if 道具.开关:getandCmpColor("开关") then 道具.开关:Click() end 
+		if 策略=="不选择" then
+			point:new({x=1234,y=977}):Click()
+		elseif 策略=="勇者之剑" then
+			道具.勇者之剑:getandCmpColor(false,0.3)
+		elseif 策略=="勇者之枪" then
+			道具.勇者之枪:getandCmpColor(false,0.3) 
+		elseif 策略=="勇者之弓" then
+			道具.勇者之弓:getandCmpColor(false,0.3)
+		elseif 策略=="勇者披风" then
+			Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},4);slp(0.1)
+			道具.勇者披风:getandCmpColor(false,0.3)
+		elseif 策略=="勇者之盾" then
+			Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},4);slp(0.1)
+			道具.勇者之盾:getandCmpColor(false,0.3)
+		end
 		point:new({x=1234,y=977}):Click()
-	elseif 策略=="勇者之剑" then
-		道具.勇者之剑:getandCmpColor(false,0.3)
-	elseif 策略=="勇者之枪" then
-		道具.勇者之枪:getandCmpColor(false,0.3) 
-	elseif 策略=="勇者之弓" then
-		道具.勇者之弓:getandCmpColor(false,0.3)
-	elseif 策略=="勇者披风" then
-		Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},4);slp(0.1)
-		道具.勇者披风:getandCmpColor(false,0.3)
-	elseif 策略=="勇者之盾" then
-		Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},4);slp(0.1)
-		道具.勇者之盾:getandCmpColor(false,0.3)
-	end
-	point:new({x=1234,y=977}):Click()
 end
 
 
