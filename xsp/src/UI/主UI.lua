@@ -6,7 +6,8 @@ local DevScreen={
 local 助战名单="无要求,列表第一个,列表第二个,列表第三个,梅林,诸葛孔明,玉藻前,拉二,德雷克,海伦娜(Caster),小莫(Rider),小莫(saber),花嫁尼禄,"
 local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛"
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
-local 礼装名单=礼装名单.."欢悦绵羊(冥界之砂),繁星之夜(雪宝宝),派对时光(亡者之铃),雪盗(虚幻蜡烛)"
+local 礼装名单=礼装名单.."死之艺术,迦勒底的学者,无慈悲者,引导迦勒底的少女,柔软的慈爱,毒蛇一艺"
+
 local 主UI=UI:new(DevScreen,{align="left",w=90,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
 local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
 主功能选择:addLabel({text="[冥界的圣诞快乐]",size=60,align="center",w=90,color="255,0,0"})

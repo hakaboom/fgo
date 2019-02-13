@@ -273,5 +273,56 @@ Data['雪盗(虚幻蜡烛)']={
 	{x=120,y=531,color=0xda6262},
 	MainPoint={x=71,y=286},
 }
-
+-->>>>>>>>>>>>>>>>赝作无限池
+Data['死之艺术']={
+	{x=185,y=516,color=0xfee6c5},
+	{x=81,y=527,color=0xfde5c4},
+	{x=118,y=503,color=0x9d0008},
+	{x=245,y=521,color=0xfde5c4},
+	{x=244,y=522,color=0xfde5c4},
+	{x=223,y=533,color=0xd6a59c},
+	MainPoint={x=71,y=292},
+}
+Data['迦勒底的学者']={
+	{x=148,y=510,color=0xfce3db},
+	{x=260,y=522,color=0xf9e9d0},
+	{x=106,y=518,color=0x340b0b},
+	{x=205,y=512,color=0xf9f9f9},
+	{x=133,y=534,color=0xfcd3c2},
+	MainPoint={x=71,y=292},
+}
+Data['无慈悲者']={
+	{x=84,y=513,color=0xf5f5ed},
+	{x=208,y=533,color=0xe9afaf},
+	{x=235,y=552,color=0x717982},
+	{x=267,y=524,color=0xd0d0d0},
+	{x=239,y=551,color=0x747d86},
+	MainPoint={x=71,y=292},
+}
+Data['引导迦勒底的少女']={  
+	{x=149,y=527,color=0x933830},
+	{x=93,y=504,color=0x943931},
+	{x=232,y=516,color=0xfedece},
+	{x=286,y=508,color=0xf1bf96},
+	{x=304,y=499,color=0x2e262e},
+	{x=233,y=519,color=0xfddccc},
+	MainPoint={x=71,y=292},
+}
+Data['柔软的慈爱']={
+	{x=128,y=503,color=0xffffff},
+	{x=268,y=500,color=0xffffff},
+	{x=206,y=526,color=0xfcecda},
+	{x=91,y=544,color=0xe8dfdf},
+	{x=305,y=498,color=0xcab8b0},
+	{x=186,y=533,color=0xf9e9d1},
+	MainPoint={x=71,y=292},
+}
+Data['毒蛇一艺']={
+	{x=143,y=521,color=0x908888},
+	{x=84,y=543,color=0x698292},
+	{x=214,y=536,color=0xd8c8af},
+	{x=288,y=509,color=0xaabcc5},
+	{x=157,y=501,color=0x404048},
+	MainPoint={x=71,y=292},
+}
 return Data

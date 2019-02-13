@@ -7,19 +7,16 @@ local tbl=require("Behavior.Data")
 function Behavior.AP回复(index)
 	local 金苹果,银苹果=point:new({x=1090,y=445,color=0xf1e9d8}),point:new({x=1090,y=660,color=0xf1e9d8})
 	local 铜苹果,圣晶石=point:new({x=932,y=848,color=0xf4ecdb}),point:new({x=1090,y=220,color=0xf1e9d8})
---	local 下滑={point:new({x=986,y=550}),point:new({x=990,y=250})}
 	if index=="不补充体力" then  print("不补充体力") lua_exit()
 	elseif index=="金苹果" then
 		if 金苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="银苹果" then
 		if 银苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="铜苹果" then
---		Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1)
 		if 铜苹果:getandCmpColor(true) then else lua_exit() end
 	elseif index=="铜+银苹果" then
 		if 银苹果:getandCmpColor(true) then
 			else
---			Move({下滑[1].x,下滑[1].y},{下滑[2].x,下滑[2].y},3);slp(0.1) 
 			if 铜苹果:getandCmpColor(true) then else lua_exit() end
 		end
 	elseif index=="圣晶石" then
