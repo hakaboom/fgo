@@ -342,7 +342,8 @@ AP不足:getDoingBehavior():setServer(
 		elseif aim=="申请好友" then
 			point:new({x=495,y=923}):Click()
 		elseif aim=="获取新卡" then
-			point:new({x=71,y=63}):Click()
+			print('获取新卡')
+			point:new({x=55,y=63}):Click()
 		elseif aim==true then
 			blackboard:setValue("当前游戏场景","初始化页面")
 		end

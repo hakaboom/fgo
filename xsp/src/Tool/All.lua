@@ -109,7 +109,7 @@ local x2,y2=Moveend[1],Moveend[2]
 		local x=x1+(x2-x1)*(i/100)
 		local y=y1+(y2-y1)*(i/100)
 	touchMove(2,ceil(x),ceil(y))
-	mSleep(20)
+	mSleep(30)
 	end
 	slp(0.5)
 	touchUp(2,x2,y2)

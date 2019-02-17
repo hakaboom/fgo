@@ -38,14 +38,13 @@ Data.拉二={
 	MainPoint={x=71,y=678},
 }
 Data.德雷克={
-	{x=178,y=414,color=0xf7d6c6},
-	{x=138,y=411,color=0xed4893},
-	{x=86,y=435,color=0x5991ad},
-	{x=269,y=408,color=0xafa79e},
-	{x=302,y=379,color=0xff6d96},
-	{x=154,y=340,color=0x796950},
-	{x=170,y=467,color=0x392323},
-	MainPoint={x=71,y=290},
+	{x=192,y=391,color=0xfce4d3},
+	{x=173,y=411,color=0xf4d3c2},
+	{x=149,y=308,color=0x351e1e},
+	{x=306,y=331,color=0x1a120a},
+	{x=305,y=433,color=0x1c5576},
+	{x=130,y=405,color=0xdc2f81},
+	MainPoint={x=71,y=279},
 }
 Data.花嫁尼禄={
 	{x=197,y=416,color=0xfff1e0},

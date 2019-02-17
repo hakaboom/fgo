@@ -24,7 +24,7 @@ function Behavior.AP回复(index)
 	elseif index=="挂机等待60分钟" then for i=1,60*30 do slp(2) end
 	elseif index=="挂机等待120分钟"	then for i=1,60*60 do slp(2) end
 	end
-	slp(2.5)
+	slp(2)
 	point:new({x=1156,y=832}):Click(1)
 end
 
@@ -84,6 +84,14 @@ function Behavior.选择助战()
 		tbl.助战选择页面:WaitScreen("助战选择页面")
 		slp(0.5)
 	end
+	local function 识别下拉框()
+		_K:SwitchScreen(false)
+		if point:new({x=1864,y=1017,color=0xebebf3,offset=0x121212}):getandCmpColor() then
+			print("下拉框到底")
+			return true
+		end
+		return false
+	end
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	local 礼装选择,从者选择=MainConfig.礼装选择,MainConfig.从者选择
 	local 是否满破,是否好友=MainConfig.是否选择满破礼装,MainConfig.是否选择好友
@@ -95,31 +103,30 @@ function Behavior.选择助战()
 		elseif 无符合是否更新=="更新两次助战" then 列表更新次数=2 
 		elseif 无符合是否更新=="更新三次助战" then 列表更新次数=3
 	end
-	--	Print("礼装选择:"..礼装选择,"从者选择:"..从者选择,"列表更新次数:"..列表更新次数,"助战选择优先级:"..助战选择优先级)
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	if     从者选择=="列表第一个" then 列表位置[1]:Click(0.5) return 
-	elseif 从者选择=="列表第二个" then 列表位置[2]:Click(0.5) return 
-	elseif 从者选择=="列表第三个" then 列表位置[3]:Click(0.5) return 
+		elseif 从者选择=="列表第二个" then 列表位置[2]:Click(0.5) return 
+		elseif 从者选择=="列表第三个" then 列表位置[3]:Click(0.5) return 
 	else
-	local 下滑=下滑距离()
+		local 下滑=下滑距离()
 		while true do
-				for k=1,6 do	--代表下滑并且识别5次
-					slp(0.5)
-					_K:SwitchScreen(false)
-					local area,index=获取助战位置()
-						for i=1,2 do
-							while true do
-								if not 识别(从者data[从者选择],area[i],从者选择..i) then print("未识别到从者") break end
-								if not 识别(礼装data[礼装选择],area[i],礼装选择..i) then print("未识别到礼装") break end 
-								if 是否满破 then if 礼装data[礼装选择] then if not 识别(礼装data["满破"],area[i],"满破") then print("未识别到满破") break end end end
-								if 是否好友 then if not 识别(礼装data["好友"],area[i],"好友") then print("未识别到好友") break end end
-								return point:new(index[i]):Click(1)
-							end
+			for k=1,6 do	--代表下滑并且识别5次
+			slp(0.5)
+				_K:SwitchScreen(false)
+				local area,index=获取助战位置()
+					for i=1,2 do
+						while true do
+							if not 识别(从者data[从者选择],area[i],从者选择..i) then print("未识别到从者") break end
+							if not 识别(礼装data[礼装选择],area[i],礼装选择..i) then print("未识别到礼装") break end 
+							if 是否满破 then if 礼装data[礼装选择] then if not 识别(礼装data["满破"],area[i],"满破") then print("未识别到满破") break end end end
+							if 是否好友 then if not 识别(礼装data["好友"],area[i],"好友") then print("未识别到好友") break end end
+							return point:new(index[i]):Click(1)
 						end
-						Move(下滑[1],下滑[2],4)
-					_K:keepScreen(false)
-					if tbl.助战下拉条:findColor() then print("下拉条到底") break end
-				end	
+					end
+					Move(下滑[1],下滑[2],4)
+				_K:keepScreen(false)
+				if 识别下拉框() then print("下拉条到底") break end --tbl.助战下拉条:findColor()
+			end	
 			if 列表更新次数>已更新列表次数 then 列表更新() 已更新列表次数=已更新列表次数+1 等待助战页面() else break end --列表更新
 		end
 		
@@ -137,7 +144,7 @@ function Behavior.选择助战()
 						end
 						Move(下滑[1],下滑[2],4)
 					_K:keepScreen(false)
-					if tbl.助战下拉条:findColor() then print("下拉条到底") break end
+					if 识别下拉框() then print("下拉条到底") break end --tbl.助战下拉条:findColor()
 				end
 				列表更新();等待助战页面()
 			end
@@ -156,7 +163,7 @@ function Behavior.选择助战()
 						end
 						Move(下滑[1],下滑[2],4)
 					_K:keepScreen(false)
-					if tbl.助战下拉条:findColor() then print("下拉条到底") break end
+					if 识别下拉框() then print("下拉条到底") break end --tbl.助战下拉条:findColor()
 				end	
 				列表更新();等待助战页面()
 			end		
@@ -175,7 +182,7 @@ function Behavior.选择助战()
 						end
 						Move(下滑[1],下滑[2],4)
 					_K:keepScreen(false)
-					if tbl.助战下拉条:findColor() then print("下拉条到底") break end
+					if 识别下拉框() then print("下拉条到底") break end --tbl.助战下拉条:findColor()
 				end	
 				列表更新();等待助战页面()
 			end
@@ -202,6 +209,7 @@ function Behavior.释放技能(index)
 	local 换人后指向性技能策略=MainConfig["换人后指向性技能"]
 	local 识别敌方宝具策略=MainConfig[index.."识别敌方宝具"]
 	local 防御技能策略=MainConfig[index..'防御技能']
+	local 御主防御技能策略=MainConfig[index..'御主防御技能']
 	local 防御指向性技能策略=MainConfig[index..'防御指向性技能']
 	local 技能位置={
 		从者技能={{index={69,830,137,898}},{index={219,837,272,894}},{index={347,833,406,893}},{index={551,840,607,891}},{index={678,827,754,900}},{index={827,845,876,897}},{index={1031,836,1084,899}},{index={1159,832,1213,895}},{index={1302,831,1357,902}}},
@@ -270,12 +278,18 @@ function Behavior.释放技能(index)
 				{x=257,y=119,color=0xff5c60},
 				{x=281,y=119,color=0xff5c62},
 				Degree=90,
-				_tag="敌人充能槽"
+				_tag='敌人充能槽'
 			})
 			防御技能策略 = 防御技能策略 and 防御技能策略 or {} 
+			御主防御技能策略 = 御主防御技能策略 and 御主防御技能策略 or {} 
 			if multi:findColor() then
 				for k,v in pairs(防御技能策略) do
 					multiPoint:new(TableCopy(技能位置.从者技能[k])):Click(1)
+					放技能(防御指向性技能策略)
+				end
+				for k,v in pairs(御主防御技能策略) do
+					point:new({x=1795,y=477}):Click(0.6)
+					multiPoint:new(TableCopy(技能位置.御主技能[k])):Click(1)
 					放技能(防御指向性技能策略)
 				end
 				return
