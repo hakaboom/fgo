@@ -1,5 +1,5 @@
 require"Tool.All"
-_scriptver="2019.2.17 19.00"
+_scriptver="2019.2.19 22.36"
 DevScreen={	--开发
 	Top=0,Bottom=0,Left=0,Right=0,
 	Width=1920,Height=1080,
@@ -11,6 +11,7 @@ _const={
 
 _K=System:new(DevScreen,getCur(1000/560,1280/720),1,"Height","Height")
 if (_K.Cur.Height==1080 and _K.Cur.Width==1920) then _const.GetColorMode='getColor' end
+
 init("0",getScreenDirection())
 setUIOrientation(getScreenDirection())
 

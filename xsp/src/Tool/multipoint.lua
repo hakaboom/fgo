@@ -54,7 +54,7 @@ end
 point={
 }
 
-function point:new(Baseinfo)--table,{x=100,y=100,Color=0xFFFFFF,Degree=95}
+function point:new(Baseinfo)--table,{x=100,y=100,color=0xFFFFFF,Degree=95}
 --local Baseinfo=TableCopy(Baseinfo)
 local Arry=Baseinfo.Arry or _Arry
 Baseinfo.Degree=Baseinfo.Degree or 95
@@ -70,10 +70,10 @@ Baseinfo.index=Baseinfo.index or 1
 		o.x=(o.x-Arry.Dev.Left)*Arry.AppurtenantScaleMode+Arry.Cur.Left	--分别计算出缩放后的X,Y
 		o.y=(o.y-Arry.Dev.Top)*Arry.AppurtenantScaleMode+Arry.Cur.Top
 	elseif Baseinfo.DstMainPoint then							--预先设置锚点
-		o.x,o.y=getScaleXY(o.x,o.y,o.MainPoint,Baseinfo.DstMainPoint,Arry)	--缩放
+		o.x,o.y=getScaleXY({x=o.x,y=o.y},o.MainPoint,Baseinfo.DstMainPoint,Arry)	--缩放
 	else	
 		o.DstMainPoint=getScaleMainPoint(o.MainPoint,o.Anchor,Arry)	--计算锚点
-		o.x,o.y=getScaleXY(o.x,o.y,o.MainPoint,o.DstMainPoint,Arry)	--缩放
+		o.x,o.y=getScaleXY({x=o.x,y=o.y},o.MainPoint,o.DstMainPoint,Arry)	--缩放
 	end
 	
 	setmetatable(o,{__index = self} )	

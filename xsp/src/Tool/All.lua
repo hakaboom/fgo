@@ -133,8 +133,8 @@ function getSkillChoice(skillChoice,order)
 	local t=skillChoice 
 	local mt={}
 	for _,v in pairs(order) do
-		if belongindex(t,v) then
-			table.insert(mt,v)
+		if belongvalue(t,v) then
+			mt[#mt+1] = v
 		end
 	end
 	return mt 
@@ -169,4 +169,21 @@ local pattern = "[^%w%d%?=&:/._%-%* ]"
     end)
     s = string.gsub(s, " ", "+")
     return s
+end
+
+function strToTable(str)	--only numberSte
+	local t={}
+	for k in string.gmatch(str,"%d") do
+		t[#t+1]=tonumber(k)
+	end
+	return t
+end
+
+function keyToValueTable(tbl)
+	if type(tbl)~='table' then return {} end
+	local t={}
+	for k,v in pairs(tbl) do
+		t[#t+1]=k
+	end
+	return t
 end

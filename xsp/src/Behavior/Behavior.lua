@@ -202,18 +202,25 @@ function Behavior.选择优先敌人(index)
 end
 
 function Behavior.释放技能(index)
-	local 技能策略={从者技能=MainConfig[index.."技能选择"],御主技能=MainConfig[index.."御主技能选择"]}
-	local 换人策略={先发=MainConfig["换人礼装_先发"],替补=MainConfig["换人礼装_替补"]}
-	local 换人技能策略=MainConfig["换人后释放技能"]
-	local 指向性技能策略=MainConfig[index.."指向性技能"]
-	local 换人后指向性技能策略=MainConfig["换人后指向性技能"]
-	local 识别敌方宝具策略=MainConfig[index.."识别敌方宝具"]
-	local 防御技能策略=MainConfig[index..'防御技能']
-	local 御主防御技能策略=MainConfig[index..'御主防御技能']
-	local 防御指向性技能策略=MainConfig[index..'防御指向性技能']
+	local 技能策略 = {从者技能=MainConfig[index.."技能选择"],御主技能=MainConfig[index.."御主技能选择"]}
+	local 换人策略 = {先发=MainConfig["换人礼装_先发"],替补=MainConfig["换人礼装_替补"]}
+	local 换人技能策略			= MainConfig["换人后释放技能"]
+	local 指向性技能策略			= MainConfig[index.."指向性技能"]
+	local 换人后指向性技能策略	= MainConfig["换人后指向性技能"]
+	local 识别敌方宝具策略		= MainConfig[index.."识别敌方宝具"]
+	local 防御技能策略			= MainConfig[index..'防御技能']
+	local 御主防御技能策略		= MainConfig[index..'御主防御技能']
+	local 防御指向性技能策略		= MainConfig[index..'防御指向性技能']
+	local 从者技能顺序			= MainConfig[index..'从者技能顺序']
+	从者技能顺序 = strToTable(从者技能顺序)
+	技能策略['从者技能'] = getSkillChoice(keyToValueTable(技能策略['从者技能']),从者技能顺序)
+	技能策略['御主技能'] = keyToValueTable(技能策略['御主技能'])
+	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	local 技能位置={
-		从者技能={{index={69,830,137,898}},{index={219,837,272,894}},{index={347,833,406,893}},{index={551,840,607,891}},{index={678,827,754,900}},{index={827,845,876,897}},{index={1031,836,1084,899}},{index={1159,832,1213,895}},{index={1302,831,1357,902}}},
-		御主技能={{index={1325,439,1390,493}},{index={1456,431,1524,498}},{index={1596,430,1651,496}}}}
+		从者技能={  {69,830,137,898},{219,837,272,894},{347,833,406,893},
+					{551,840,607,891},{678,827,754,900},{827,845,876,897},
+					{1031,836,1084,899},{1159,832,1213,895},{1302,831,1357,902}},
+		御主技能={{1325,439,1390,493},{1456,431,1524,498},{1596,430,1651,496}}}
 	local 指向性技能位置={	
 			一号位=multiPoint:new({index={409,674,525,783}}),
 			二号位=multiPoint:new({index={887,672,1047,786}}),
@@ -236,8 +243,8 @@ function Behavior.释放技能(index)
 		end
 			tbl.战斗主页:WaitScreen("战斗主页")
 			if not 换人技能策略 then return end
-			for k,v in pairs(换人技能策略) do
-				multiPoint:new(TableCopy(技能位置.从者技能[t[k]])):Click(1)
+			for k,_ in pairs(换人技能策略) do
+				multiPoint:new({index=TableCopy(技能位置.从者技能[t[k]])}):Click(1)
 				放技能(换人后指向性技能策略)
 			end
 	end
@@ -283,13 +290,13 @@ function Behavior.释放技能(index)
 			防御技能策略 = 防御技能策略 and 防御技能策略 or {} 
 			御主防御技能策略 = 御主防御技能策略 and 御主防御技能策略 or {} 
 			if multi:findColor() then
-				for k,v in pairs(防御技能策略) do
-					multiPoint:new(TableCopy(技能位置.从者技能[k])):Click(1)
+				for k,_ in pairs(防御技能策略) do
+					multiPoint:new({index=TableCopy(技能位置.从者技能[k])}):Click(1)
 					放技能(防御指向性技能策略)
 				end
-				for k,v in pairs(御主防御技能策略) do
+				for k,_ in pairs(御主防御技能策略) do
 					point:new({x=1795,y=477}):Click(0.6)
-					multiPoint:new(TableCopy(技能位置.御主技能[k])):Click(1)
+					multiPoint:new({index=TableCopy(技能位置.御主技能[k])}):Click(1)
 					放技能(防御指向性技能策略)
 				end
 				return
@@ -301,9 +308,9 @@ function Behavior.释放技能(index)
 	if MainConfig.优先释放御主技能 then 释放顺序={"御主技能","从者技能"} end
 	for i=1,2 do if not 技能策略[释放顺序[i]] then 技能策略[释放顺序[i]]={} end end
 		for i=1,2 do
-			for k,v in pairs(技能策略[释放顺序[i]]) do
+			for _,v in pairs(技能策略[释放顺序[i]]) do
 				if 释放顺序[i]=="御主技能" then point:new({x=1795,y=477}):Click(0.6) end
-				multiPoint:new(TableCopy(技能位置[释放顺序[i]][k])):Click(1)
+				multiPoint:new({index=TableCopy(技能位置[释放顺序[i]][v])}):Click(1)
 				放技能()
 			end
 		end
@@ -311,7 +318,10 @@ function Behavior.释放技能(index)
 end
 
 function Behavior.释放宝具(index,bool)
-	local 宝具释放=MainConfig[index.."宝具选择"];释放顺序策略=MainConfig[index.."宝具释放顺序"];local 循环释放=MainConfig[index.."宝具循环释放"]
+	local 宝具释放		= keyToValueTable(MainConfig[index.."宝具选择"])
+	local 释放顺序策略	= MainConfig[index.."宝具释放顺序"]
+	local 循环释放		= MainConfig[index.."宝具循环释放"]
+	
 	if not 宝具释放 then print('未选择宝具') return end
 	local tbl={[123]={1,2,3},[213]={2,1,3},[321]={3,2,1},[132]={1,3,2},[312]={3,1,2}}
 	local 宝具位置={		 	
@@ -321,7 +331,7 @@ function Behavior.释放宝具(index,bool)
 	if not 循环释放 then	--不循环释放
 		if bool==true then --新回合
 			for k,v in pairs(顺序) do
-				multiPoint:new({index=宝具位置[v]}):Click()
+				multiPoint:new({index=宝具位置[v]}):Click(0.2)
 				slp()
 			end
 		end
@@ -350,12 +360,13 @@ function Behavior.选卡(卡牌Data,index)
 		权重={颜色={红=红色,蓝=蓝色,绿=绿色},克制=克制,助战=助战}
 		return 权重
 	end
-	local 出卡顺序=MainConfig[index.."出卡颜色顺序"]	--"红>蓝>绿,蓝>红>绿,绿>红>蓝,红>绿>蓝"
-	local 出卡逻辑=MainConfig[index.."出卡逻辑"]	--无要求,前三张,同颜色,优先助战,不优先助战,优先同个角色
-	local 是否克制=MainConfig.是否计算克制
+	local 出卡顺序 = MainConfig[index.."出卡颜色顺序"]	--"红>蓝>绿,蓝>红>绿,绿>红>蓝,红>绿>蓝"
+	local 出卡逻辑 = MainConfig[index.."出卡逻辑"]	--无要求,前三张,同颜色,优先助战,不优先助战,优先同个角色
+	local 是否克制 = MainConfig.是否计算克制
 	local 选卡={{120,680,258,860},{515,680,640,860},{874,680,1044,860},{1269,680,1414,860},{1660,680,1813,860}}
 	local 权重=设定卡牌权重(出卡顺序,出卡逻辑,是否克制);
 	local Data=TableCopy(卡牌Data)
+	
 	local 卡牌={1000,1000,1000,1000,1000}
 		for i=1,5 do
 			local data=Data[i]
@@ -436,12 +447,9 @@ function Behavior.取得卡牌信息(AreaTbl,index)
 end
 
 function Behavior.贩卖(策略,nowfunction)
-	local Data={第一行第一个={121,448,287,460},第二行第一个={121,661,287,673},第一行第二个={321,448,487,460}}
-	local indexData={第一行第一个={140,325,275,441},第二行第一个={140,537,275,654},第一行第二个={340,325,475,441}}
-	local 行间距,列间距=Data["第二行第一个"][2]-Data["第一行第一个"][2],Data["第一行第二个"][1]-Data["第一行第一个"][1]
 	local ColorData={
 		铜={{x=154,y=455,color=0x97876e},{x=252,y=456,color=0x8c7b62}},
-		银={{x=154,y=671,color=0xb7b7b7},{x=252,y=667,color=0xb4b4b4}},
+		银={{x=151,y=467,color=0xb3b3b3},{x=259,y=465,color=0xb2b2b2}},
 		金={x=816,y=437,color=0xfac103}
 	}	
 	local mode,screen
@@ -496,15 +504,6 @@ function Behavior.贩卖(策略,nowfunction)
 			point:new({x=41,y=1015}):Click(0.3)
 		end
 	end
-	local function 取得卡牌范围(data)
-		local tbl={}
-		for k=1,3 do
-			for i=1,7 do
-				tbl[#tbl+1]={data[1]+(i-1)*列间距,data[2]+(k-1)*行间距,data[3]+(i-1)*列间距,data[4]+(k-1)*行间距}
-			end
-		end
-		return tbl
-	end
 	local function 卖出()
 		point:new({x=1636,y=1006}):Click(1)--决定
 		point:new({x=1156,y=875}):Click(1)--销毁
@@ -512,14 +511,14 @@ function Behavior.贩卖(策略,nowfunction)
 		point:new({x=952,y=877}):Click(1)--关闭
 	end
 	tbl.灵基变还:WaitScreen("灵基变还")
+	
 	if point:new({x=162,y=219,color=0xc12d35}):getandCmpColor() then mode="从者" else mode="礼装" end
-	local AreaTbl,indexTbl,Tbl=取得卡牌范围(Data["第一行第一个"]),取得卡牌范围(indexData["第一行第一个"]),{}
-		if nowfunction=="按次数重复刷图" then 
-			if 策略=="停止脚本" then lua_exit() end
-		elseif nowfunction=="自动抽友情" then
-			if 策略[mode] then 策略=策略[mode.."策略"] else lua_exit() end
-		elseif nowfunction=="自动贩卖" then
-			if 策略.功能=="礼装" then 
+	if nowfunction=="按次数重复刷图" then 
+		if 策略=="停止脚本" then lua_exit() end
+	elseif nowfunction=="自动抽友情" then
+		if 策略[mode] then 策略=策略[mode.."策略"] else lua_exit() end
+	elseif nowfunction=="自动贩卖" then
+		if 策略.功能=="礼装" then 
 			if mode=="从者" then point:new({x=711,y=192}):Click(0.5) end
 				screen=策略.筛选
 				if screen[3] and not screen[1] and not screen[2] then 
@@ -530,31 +529,41 @@ function Behavior.贩卖(策略,nowfunction)
 					策略="铜"
 				end	
 			elseif 策略.功能=="从者" then
-			if mode=="礼装" then point:new({x=162,y=219}):Click(0.5) end
-				screen=策略.筛选
-				策略=策略.星级
-			end
-		else
-			策略="铜银狗粮"
-		end
+				if mode=="礼装" then point:new({x=162,y=219}):Click(0.5) end
+					screen=策略.筛选
+					策略=策略.星级
+				end
+	else
+		策略="铜银狗粮"
+	end
 	筛选(mode,nowfunction,screen);调整顺序(mode);升降序("升序")
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	local Arry=_Arry.AppurtenantScaleMode
+	local 行间距,列间距=200*Arry,213*Arry
+	local 左列表=point:new({x=93,y=0,MainPoint={x=0,y=0},Anchor='Left'}):getXY()
+	local 上列表=point:new({x=93,y=248,MainPoint={x=0,y=0},Anchor='Top'}):getXY()
+	local 第一行第一个={	x=左列表.x+48*Arry,
+						y=上列表.y+27*Arry+180*Arry --140,455
+					} 
 	while true do
+	local Tbl,clickTbl={},{}
 		_K:SwitchScreen(true)
-			for i=1,21 do
-				Tbl[i]="无"
-				for k=1,1 do
-					if multiPoint:new({Area=AreaTbl[i],unpack(ColorData["铜"])}):findColor() then
-						Tbl[i]="铜"
-						break
-					end
-					if multiPoint:new({Area=AreaTbl[i],unpack(ColorData["银"])}):findColor() then
-						Tbl[i]="银"
-						break
-					end
-					if multiPoint:new({Area=AreaTbl[i],ColorData["金"]}):findColor() then
-						Tbl[i]="金"
-						break
+			for i=0,2 do
+				for k=0,6 do
+					for v=1,1 do
+						local x= 第一行第一个.x+行间距*k
+						local y= 第一行第一个.y+列间距*i
+						clickTbl[#clickTbl+1]=point:new({x=x,y=y,mode=true})
+						if point:new({x=x,y=y,color=0x928269,mode=true}):getandCmpColor() then
+							Tbl[#Tbl+1]='铜';break
+						end
+						if point:new({x=x,y=y,color=0xb2b2b2,mode=true}):getandCmpColor() then
+							Tbl[#Tbl+1]='银';break
+						end
+						if point:new({x=x,y=y,color=0xdcb327,mode=true}):getandCmpColor() then
+							Tbl[#Tbl+1]='金';break
+						end	
+						Tbl[#Tbl+1]='无'
 					end
 				end
 			end
@@ -563,7 +572,7 @@ function Behavior.贩卖(策略,nowfunction)
 				if Tbl[1]=="金" or Tbl[1]=="无" then return false end
 				for k,v in pairs(Tbl) do
 					if v=="铜" or v=="银" then
-						multiPoint:new({index=indexTbl[k]}):Click(0.1)
+						clickTbl[k]:Click(0.1)
 					end
 					if v=="金" then break end
 				end
@@ -572,7 +581,7 @@ function Behavior.贩卖(策略,nowfunction)
 				if Tbl[1]=="金" or Tbl[1]=="无" or Tbl[1]=="银" then return false end
 				for k,v in pairs(Tbl) do
 					if v=="铜" then
-						multiPoint:new({index=indexTbl[k]}):Click(0.1)
+						clickTbl[k]:Click(0.1)
 					end
 					if v=="金" or v=="银" then break end
 				end
@@ -580,14 +589,14 @@ function Behavior.贩卖(策略,nowfunction)
 				if Tbl[1]=="金" or Tbl[1]=="无" or Tbl[1]=="铜" then return false end
 				for k,v in pairs(Tbl) do
 					if v=="银" then
-						multiPoint:new({index=indexTbl[k]}):Click(0.1)
+						clickTbl[k]:Click(0.1)
 					end
 					if v=="金" or v=="铜" then break end
 				end
 			elseif 策略=="全都卖" then
 				if not Tbl[1] then return false end
 				for k,v in pairs(Tbl) do
-					multiPoint:new({index=indexTbl[k]}):Click(0.1)
+					clickTbl[k]:Click(0.1)
 			end
 		end
 			卖出()
