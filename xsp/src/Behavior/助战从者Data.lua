@@ -114,6 +114,23 @@ Data.弓凛={
 	{x=114,y=473,color=0xffd8b7},
 	MainPoint={x=71,y=292},
 }
+Data['彭忒西勒亚(CEO)']={
+	{x=174,y=354,color=0xfdeddc},
+	{x=209,y=407,color=0xfdf5ed},
+	{x=285,y=349,color=0x5061bb},
+	{x=238,y=427,color=0xf9f9f9},
+	{x=155,y=348,color=0xf9e0d0},
+	{x=96,y=362,color=0xfbdafb},
+	MainPoint={x=71,y=281},
+}
+Data['兰斯洛特(狂)']={ 
+	{x=225,y=666,color=0x4858e5},
+	{x=99,y=761,color=0x2750bb},
+	{x=87,y=664,color=0x2740fd},
+	{x=293,y=659,color=0x58bbfd},
+	{x=244,y=660,color=0x3750dc},
+	MainPoint={x=71,y=592},
+}
 Data["小莫(Rider)"]={
 	{x=196,y=519,color=0xf1c8a7},
 	{x=241,y=547,color=0x9ef0e0},

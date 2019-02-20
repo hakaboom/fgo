@@ -212,15 +212,41 @@ function Behavior.释放技能(index)
 	local 御主防御技能策略		= MainConfig[index..'御主防御技能']
 	local 防御指向性技能策略		= MainConfig[index..'防御指向性技能']
 	local 从者技能顺序			= MainConfig[index..'从者技能顺序']
+
+	local 技能顺序,御主技能={},{}
+	if MainConfig.优先释放御主技能 and not 从者技能顺序 then
+		从者技能顺序 = 'ABC123456789'
+	end
 	从者技能顺序 = strToTable(从者技能顺序)
-	技能策略['从者技能'] = getSkillChoice(keyToValueTable(技能策略['从者技能']),从者技能顺序)
 	技能策略['御主技能'] = keyToValueTable(技能策略['御主技能'])
+	table.foreach(技能策略['御主技能'],function(k,v) 
+			if 		v=='1' or v==1 then 御主技能[#御主技能+1]=10
+		elseif  v=='2' or v==2 then 御主技能[#御主技能+1]=11
+		elseif  v=='3' or v==3 then 御主技能[#御主技能+1]=12
+		end
+	end)
+	技能策略['从者技能'] = keyToValueTable(技能策略['从者技能'])
+	技能顺序=TableCopy(技能策略['从者技能'])
+	margeTable(技能顺序,御主技能)
+	技能顺序 = getSkillChoice(技能顺序,从者技能顺序)
+	table.foreach(技能策略['从者技能'],function(k,v) 
+		if not belongvalue(技能顺序,v) then
+			技能顺序[#技能顺序+1]=v
+		end
+	end)
+	table.foreach(御主技能,function(k,v) 
+		if not belongvalue(技能顺序,v) then
+			技能顺序[#技能顺序+1]=v
+		end
+	end)
+
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-	local 技能位置={
-		从者技能={  {69,830,137,898},{219,837,272,894},{347,833,406,893},
+	local 技能位置={ 
+					{69,830,137,898},{219,837,272,894},{347,833,406,893},
 					{551,840,607,891},{678,827,754,900},{827,845,876,897},
-					{1031,836,1084,899},{1159,832,1213,895},{1302,831,1357,902}},
-		御主技能={{1325,439,1390,493},{1456,431,1524,498},{1596,430,1651,496}}}
+					{1031,836,1084,899},{1159,832,1213,895},{1302,831,1357,902},
+		--御主技能	
+					{1325,439,1390,493},{1456,431,1524,498},{1596,430,1651,496}}
 	local 指向性技能位置={	
 			一号位=multiPoint:new({index={409,674,525,783}}),
 			二号位=multiPoint:new({index={887,672,1047,786}}),
@@ -244,7 +270,7 @@ function Behavior.释放技能(index)
 			tbl.战斗主页:WaitScreen("战斗主页")
 			if not 换人技能策略 then return end
 			for k,_ in pairs(换人技能策略) do
-				multiPoint:new({index=TableCopy(技能位置.从者技能[t[k]])}):Click(1)
+				multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
 				放技能(换人后指向性技能策略)
 			end
 	end
@@ -289,14 +315,21 @@ function Behavior.释放技能(index)
 			})
 			防御技能策略 = 防御技能策略 and 防御技能策略 or {} 
 			御主防御技能策略 = 御主防御技能策略 and 御主防御技能策略 or {} 
+			local 御主技能策略={}
+			table.foreach(御主防御技能策略,function(k,v) 
+				if 		k=='1' or k==1 then 御主技能策略[#御主技能策略+1]=10
+				elseif  k=='2' or k==2 then 御主技能策略[#御主技能策略+1]=11
+				elseif  k=='3' or k==3 then 御主技能策略[#御主技能策略+1]=12
+				end
+			end)
 			if multi:findColor() then
 				for k,_ in pairs(防御技能策略) do
-					multiPoint:new({index=TableCopy(技能位置.从者技能[k])}):Click(1)
+					multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
 					放技能(防御指向性技能策略)
 				end
-				for k,_ in pairs(御主防御技能策略) do
+				for k,v in pairs(御主技能策略) do
 					point:new({x=1795,y=477}):Click(0.6)
-					multiPoint:new({index=TableCopy(技能位置.御主技能[k])}):Click(1)
+					multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
 					放技能(防御指向性技能策略)
 				end
 				return
@@ -304,16 +337,12 @@ function Behavior.释放技能(index)
 		end
 	end
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-	local 释放顺序={"从者技能","御主技能"}
-	if MainConfig.优先释放御主技能 then 释放顺序={"御主技能","从者技能"} end
-	for i=1,2 do if not 技能策略[释放顺序[i]] then 技能策略[释放顺序[i]]={} end end
-		for i=1,2 do
-			for _,v in pairs(技能策略[释放顺序[i]]) do
-				if 释放顺序[i]=="御主技能" then point:new({x=1795,y=477}):Click(0.6) end
-				multiPoint:new({index=TableCopy(技能位置[释放顺序[i]][v])}):Click(1)
-				放技能()
-			end
-		end
+	for _,v in pairs(技能顺序) do
+		if v>=10 then point:new({x=1795,y=477}):Click(0.6) end
+		multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+		放技能()	
+	end
+	
 	if 识别敌方宝具策略 then 敌人宝具充能满(识别敌方宝具策略,index) end
 end
 
@@ -568,6 +597,7 @@ function Behavior.贩卖(策略,nowfunction)
 				end
 			end
 		_K:keepScreen(false)
+		
 			if 策略=="铜银狗粮" or 策略=="铜+银" then
 				if Tbl[1]=="金" or Tbl[1]=="无" then return false end
 				for k,v in pairs(Tbl) do

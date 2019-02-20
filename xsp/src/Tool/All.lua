@@ -172,8 +172,13 @@ local pattern = "[^%w%d%?=&:/._%-%* ]"
 end
 
 function strToTable(str)	--only numberSte
+	Print(str)
 	local t={}
-	for k in string.gmatch(str,"%d") do
+	for k in string.gmatch(str,".") do
+		if	   k=='A' or k=='a' then k=10
+		elseif k=='B' or k=='b' then k=11
+		elseif k=='C' or k=='c' then k=12
+		end
 		t[#t+1]=tonumber(k)
 	end
 	return t
@@ -186,4 +191,12 @@ function keyToValueTable(tbl)
 		t[#t+1]=k
 	end
 	return t
+end
+
+function margeTable(t1,t2)
+	if type(t1) == 'table' and type(t2) == 'table' then
+        for k, v in pairs(t2) do 
+			t1[#t1+1] = v 
+		end
+    end
 end

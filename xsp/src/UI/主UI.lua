@@ -4,13 +4,13 @@ local DevScreen={
 	Height=1080,
 }
 local 助战名单="无要求,列表第一个,列表第二个,列表第三个,梅林,诸葛孔明,玉藻前,拉二,德雷克,海伦娜(Caster),小莫(Rider),小莫(saber),花嫁尼禄,"
-local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛"
+local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛,兰斯洛特(狂),彭忒西勒亚(CEO)"
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
 local 礼装名单=礼装名单.."死之艺术,迦勒底的学者,无慈悲者,引导迦勒底的少女,柔软的慈爱,毒蛇一艺"
 
 local 主UI=UI:new(DevScreen,{align="left",w=90,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
 local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
-主功能选择:addLabel({text="[冥界的圣诞快乐]",size=60,align="center",w=90,color="255,0,0"})
+主功能选择:addLabel({text="[赝作复刻]",size=60,align="center",w=90,color="255,0,0"})
 主功能选择:nextLine()
 主功能选择:addLabel({text="功能选择:",size=40,color="57,85,164"})
 主功能选择:addLabel({text="--运行前请去叉叉设置里选择运行时隐藏悬浮窗,选择了自动卖狗粮要先调整成一排7个的模式",size=25,color="255,0,0",ypos=2})
@@ -31,7 +31,7 @@ local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
 local 技能宝具设置=Page:new(主UI,{text="技能宝具设置"})
 local 分割线=">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 技能宝具设置:addLabel({text="技能设置",size=30,align="center",color="57,85,164"})
-技能宝具设置:addLabel({text="————技能顺序格式为类似9654则技能按照9~6~5~4的顺序释放",size=25,color="255,0,0",xpos=1})
+技能宝具设置:addLabel({text="————技能顺序使用方式请看其他设置",size=25,color="255,0,0",xpos=1})
 技能宝具设置:nextLine(1.5)
 技能宝具设置:addLabel({text="从者技能:",size=25,color="0,0,255",xpos=1})
 技能宝具设置:addLabel({text="————(一到九对应三个从者的技能)建议关闭技能使用确认",size=25,color="255,0,0",xpos=1})
@@ -45,12 +45,12 @@ for k,v in pairs(关卡) do
 技能宝具设置:addLabel({text="从者技能:",size=30,color="41,157,255"})
 技能宝具设置:addCheckBoxGroup({id=v.."技能选择",list="一,二,三,四,五,六,七,八,九",select="10",size=30,w=70,h=10,color="0,0,0"})
 技能宝具设置:nextLine(0.7)
-技能宝具设置:addLabel({text="从者技能顺序:",size=30,color="41,157,255",ypos=2.5})
-技能宝具设置:addEdit({id=v.."从者技能顺序",prompt='123456789',text='123456789',kbtype="number",size=25,w=25,h=8,color="0,0,0"})
-技能宝具设置:nextLine()
 技能宝具设置:addLabel({text="御主技能:",size=30,color="41,157,255"})
 技能宝具设置:addCheckBoxGroup({id=v.."御主技能选择",list="一,二,三",select="10",size=30,w=40,h=10,color="0,0,0"})
 技能宝具设置:nextLine(0.7)
+技能宝具设置:addLabel({text="从者技能顺序:",size=30,color="41,157,255",ypos=2.5})
+技能宝具设置:addEdit({id=v.."从者技能顺序",prompt='123456789',text='123456789ABC',kbtype="number",size=25,w=25,h=8,color="0,0,0"})
+技能宝具设置:nextLine()
 技能宝具设置:addLabel({text="宝具选择:",size=30,color="41,157,255"})
 技能宝具设置:addCheckBoxGroup({id=v.."宝具选择",list="一,二,三",select="10",size=30,w=30,h=10,color="0,0,0"})
 技能宝具设置:addCheckBoxGroup({id=v.."宝具循环释放",list="循环释放",select="2",size=30,w=15,h=10,color="0,0,0"})
@@ -151,9 +151,16 @@ local 其他设置=Page:new(主UI,{text="其他设置"})
 其他设置:nextLine(0.5)
 其他设置:addCheckBoxGroup({id="隐藏计数器",list="隐藏计数器",select="2",size=25,w=15,h=10,color="0,0,0",xpos=-1})
 --其他设置:addCheckBoxGroup({id="保留助战日志到剪贴板",list="保留助战日志到剪贴板",select="2",size=30,w=25,h=10,color="0,0,0",xpos=2})
-
-
-
+其他设置:nextLine(0.5)
+其他设置:addLabel({text="关于技能顺序的介绍:",size=30,align="Left",color="57,85,164",xpos=-1})
+其他设置:nextLine(0.5)
+local 技能顺序介绍=[[首先技能顺序的格式对于与原先的从者(1,2,3,4,5,6,7,8,9)和御主技能(1,2,3),其中御主技能在填写时以ABC代替123
+因此我们如果要自定义释放顺序,如:先释放3技能再释放1技能,可以填写31
+遇到需要换人礼装时可以填写如:123C123A654,即先释放123技能然后换人重新释放123最后御主1技能和654技能
+选择了技能但没有填写进顺序的技能,则会默认放在最后释放
+注意!填写时不能有空格符号等
+]]
+其他设置:addLabel({text=技能顺序介绍,size=30,w=100,h=50,align="Left",color="0,0,0"})
 
 
 return 主UI:show(1)
