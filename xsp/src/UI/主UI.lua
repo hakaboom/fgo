@@ -4,7 +4,8 @@ local DevScreen={
 	Height=1080,
 }
 local 助战名单="无要求,列表第一个,列表第二个,列表第三个,梅林,诸葛孔明,玉藻前,拉二,德雷克,海伦娜(Caster),小莫(Rider),小莫(saber),花嫁尼禄,"
-local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛,兰斯洛特(狂),彭忒西勒亚(CEO)"
+local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛,兰斯洛特(狂),彭忒西勒亚(CEO),葛饰北斋,"
+local 助战名单=助战名单..'阿比盖尔,水尼禄'
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
 local 礼装名单=礼装名单.."死之艺术,迦勒底的学者,无慈悲者,引导迦勒底的少女,柔软的慈爱,毒蛇一艺"
 
@@ -49,7 +50,7 @@ for k,v in pairs(关卡) do
 技能宝具设置:addCheckBoxGroup({id=v.."御主技能选择",list="一,二,三",select="10",size=30,w=40,h=10,color="0,0,0"})
 技能宝具设置:nextLine(0.7)
 技能宝具设置:addLabel({text="从者技能顺序:",size=30,color="41,157,255",ypos=2.5})
-技能宝具设置:addEdit({id=v.."从者技能顺序",prompt='123456789',text='123456789ABC',kbtype="number",size=25,w=25,h=8,color="0,0,0"})
+技能宝具设置:addEdit({id=v.."从者技能顺序",prompt='123456789',text='123456789ABC',kbtype="default",size=25,w=25,h=8,color="0,0,0"})
 技能宝具设置:nextLine()
 技能宝具设置:addLabel({text="宝具选择:",size=30,color="41,157,255"})
 技能宝具设置:addCheckBoxGroup({id=v.."宝具选择",list="一,二,三",select="10",size=30,w=30,h=10,color="0,0,0"})

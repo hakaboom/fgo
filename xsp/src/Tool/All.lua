@@ -172,7 +172,6 @@ local pattern = "[^%w%d%?=&:/._%-%* ]"
 end
 
 function strToTable(str)	--only numberSte
-	Print(str)
 	local t={}
 	for k in string.gmatch(str,".") do
 		if	   k=='A' or k=='a' then k=10

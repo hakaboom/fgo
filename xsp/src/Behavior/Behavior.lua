@@ -220,7 +220,7 @@ function Behavior.释放技能(index)
 	从者技能顺序 = strToTable(从者技能顺序)
 	技能策略['御主技能'] = keyToValueTable(技能策略['御主技能'])
 	table.foreach(技能策略['御主技能'],function(k,v) 
-			if 		v=='1' or v==1 then 御主技能[#御主技能+1]=10
+		if 		v=='1' or v==1 then 御主技能[#御主技能+1]=10
 		elseif  v=='2' or v==2 then 御主技能[#御主技能+1]=11
 		elseif  v=='3' or v==3 then 御主技能[#御主技能+1]=12
 		end
@@ -239,7 +239,7 @@ function Behavior.释放技能(index)
 			技能顺序[#技能顺序+1]=v
 		end
 	end)
-
+	
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	local 技能位置={ 
 					{69,830,137,898},{219,837,272,894},{347,833,406,893},
@@ -257,7 +257,7 @@ function Behavior.释放技能(index)
 		替补={第一位={x=1109,y=514},第二位={x=1416,y=508},第三位={x=1718,y=506}}
 	}
 	local 敌人充能槽={
-		左={198,108,349,133},中={544,104,717,136},右={905,103,1069,135}
+		左={208,104,359,137},中={570,105,721,136},右={926,105,1077,136}
 	}
 	
 	function 换人后释放技能(str)
@@ -270,7 +270,7 @@ function Behavior.释放技能(index)
 			tbl.战斗主页:WaitScreen("战斗主页")
 			if not 换人技能策略 then return end
 			for k,_ in pairs(换人技能策略) do
-				multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
+				multiPoint:new({index=TableCopy(技能位置[t[k]])}):Click(1)
 				放技能(换人后指向性技能策略)
 			end
 	end
@@ -310,7 +310,6 @@ function Behavior.释放技能(index)
 				Area=TableCopy(敌人充能槽[敌人位置[k]]),
 				{x=257,y=119,color=0xff5c60},
 				{x=281,y=119,color=0xff5c62},
-				Degree=90,
 				_tag='敌人充能槽'
 			})
 			防御技能策略 = 防御技能策略 and 防御技能策略 or {} 
@@ -322,18 +321,22 @@ function Behavior.释放技能(index)
 				elseif  k=='3' or k==3 then 御主技能策略[#御主技能策略+1]=12
 				end
 			end)
-			if multi:findColor() then
-				for k,_ in pairs(防御技能策略) do
-					multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
-					放技能(防御指向性技能策略)
+			_K:keepScreen(true)
+				if multi:findColor() then
+				_K:keepScreen(false)
+					Print(敌人位置[k]..'敌人释放宝具')
+					for k,_ in pairs(防御技能策略) do
+						multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
+						放技能(防御指向性技能策略)
+					end
+					for k,v in pairs(御主技能策略) do
+						point:new({x=1795,y=477}):Click(0.6)
+						multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+						放技能(防御指向性技能策略)
+					end
+					return
 				end
-				for k,v in pairs(御主技能策略) do
-					point:new({x=1795,y=477}):Click(0.6)
-					multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
-					放技能(防御指向性技能策略)
-				end
-				return
-			end
+			_K:keepScreen(false)
 		end
 	end
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -462,8 +465,8 @@ function Behavior.取得卡牌信息(AreaTbl,index)
 		local data=multiPoint:new(data):findColor()
 			if data then return true else return false end
 		end
-	local data={}
 	_K:SwitchScreen()
+	local data={}
 		for i=1,index do
 			data[i]={
 				颜色=取得每张卡颜色(AreaTbl.Color[i]),
@@ -497,7 +500,7 @@ function Behavior.贩卖(策略,nowfunction)
 			end
 		elseif mode=="礼装" then
 			if nowfunction=="自动贩卖" then
-				point:new({x=1254,y=828}):Click(0.5)--点击全部取消
+				point:new({x=1254,y=828}):Click(1)--点击全部取消
 				point:new({x=810,y=457}):Click(0.5)--点击标记状态外
 				if screen[1] then point:new({x=485,y=457}):Click(0.5) end
 				if screen[2] then point:new({x=1439,y=340}):Click(0.5) end

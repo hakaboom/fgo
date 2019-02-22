@@ -114,6 +114,32 @@ Data.弓凛={
 	{x=114,y=473,color=0xffd8b7},
 	MainPoint={x=71,y=292},
 }
+Data.葛饰北斋={
+	{x=205,y=387,color=0xfdedf5},
+	{x=146,y=446,color=0x37abe5},
+	{x=269,y=373,color=0x5c4b65},
+	{x=143,y=328,color=0xfdedf5},
+	{x=86,y=330,color=0x4f364f},
+	{x=297,y=321,color=0x2f1f37}, 
+	MainPoint={x=71,y=264},
+}
+Data.阿比盖尔={
+	{x=192,y=394,color=0xa78eaf},
+	{x=178,y=428,color=0xf9f1f9},
+	{x=298,y=354,color=0x8f1c55},
+	{x=149,y=313,color=0xf19e54},
+	{x=140,y=395,color=0x9686a7},
+	{x=87,y=393,color=0x716982},
+	MainPoint={x=71,y=290},
+}
+Data.水尼禄={
+	{x=200,y=412,color=0xfdf5dc},
+	{x=172,y=424,color=0xfddcbb},
+	{x=85,y=410,color=0xfec31e},
+	{x=158,y=457,color=0xd0a77d},
+	{x=242,y=346,color=0xd8bf7d},
+	MainPoint={x=71,y=288},
+}
 Data['彭忒西勒亚(CEO)']={
 	{x=174,y=354,color=0xfdeddc},
 	{x=209,y=407,color=0xfdf5ed},

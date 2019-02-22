@@ -304,7 +304,8 @@ AP不足:getDoingBehavior():setServer(
 		local 克制Area={{263,540,352,625},{652,540,733,625},{1028,540,1123,625},{1413,540,1510,626},{1815,540,1887,625}}	
 		point:new({x=1703,y=899}):Click()
 		slp(2,MainConfig["脚本运行速度"])
-		local Data={Color=ColorArea,助战=助战Area,克制=克制Area}
+		
+		local Data={Color=ColorArea,助战=助战Area,克制=克制Area,人物=人物Area}
 		local 宝具Data={Color=宝具Area,助战=nil,克制=nil}
 		local 卡牌信息=behavior.取得卡牌信息(Data,5)
 		behavior.释放宝具(blackboard:getValue("当前关卡"),blackboard:getValue("是否为新回合"))
