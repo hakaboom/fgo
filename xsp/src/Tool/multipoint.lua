@@ -131,6 +131,19 @@ local point={x=self.x,y=self.y}
 		self.DstColor=DstColor
 end
 
+function point:getDiff()
+	local floor=math.floor
+	if not self.DstColor then self:getColor() end
+	local lr,lg,lb=self.DstColor.r,self.DstColor.g,self.DstColor.b
+	local r,g,b=floor(self.color/0x10000),floor(self.color%0x10000/0x100),floor(self.color%0x100)
+	local diff={
+		r=math.abs(r-lr),
+		g=math.abs(g-lg),
+		b=math.abs(b-lb),
+	}
+	return diff
+end
+
 function point:cmpColor()--比色
 local floor=math.floor
 local abs=math.abs

@@ -201,7 +201,7 @@ function Behavior.选择优先敌人(index)
 	tbl[策略]:Click()
 end
 
-function Behavior.释放技能(index)
+function Behavior.释放技能(index,newRound)
 	local 技能策略 = {从者技能=MainConfig[index.."技能选择"],御主技能=MainConfig[index.."御主技能选择"]}
 	local 换人策略 = {先发=MainConfig["换人礼装_先发"],替补=MainConfig["换人礼装_替补"]}
 	local 换人技能策略			= MainConfig["换人后释放技能"]
@@ -212,7 +212,7 @@ function Behavior.释放技能(index)
 	local 御主防御技能策略		= MainConfig[index..'御主防御技能']
 	local 防御指向性技能策略		= MainConfig[index..'防御指向性技能']
 	local 从者技能顺序			= MainConfig[index..'从者技能顺序']
-
+	
 	local 技能顺序,御主技能={},{}
 	if MainConfig.优先释放御主技能 and not 从者技能顺序 then
 		从者技能顺序 = 'ABC123456789'
@@ -259,7 +259,7 @@ function Behavior.释放技能(index)
 	local 敌人充能槽={
 		左={208,104,359,137},中={570,105,721,136},右={926,105,1077,136}
 	}
-	
+	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	function 换人后释放技能(str)
 		print("换人后释放技能")
 		local t={}
@@ -304,6 +304,7 @@ function Behavior.释放技能(index)
 			end
 	end
 	function 敌人宝具充能满(策略,index)
+		print('检测敌方充能')
 		local 敌人位置={'左','中','右'}
 		for k,v in pairs(策略) do
 			local multi=multiPoint:new({
@@ -321,10 +322,7 @@ function Behavior.释放技能(index)
 				elseif  k=='3' or k==3 then 御主技能策略[#御主技能策略+1]=12
 				end
 			end)
-			_K:keepScreen(true)
 				if multi:findColor() then
-				_K:keepScreen(false)
-					Print(敌人位置[k]..'敌人释放宝具')
 					for k,_ in pairs(防御技能策略) do
 						multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
 						放技能(防御指向性技能策略)
@@ -336,17 +334,56 @@ function Behavior.释放技能(index)
 					end
 					return
 				end
-			_K:keepScreen(false)
+		end
+	end
+	function 重新释放技能()
+		local 技能策略=		MainConfig[index.."CD冷却技能选择"]
+		-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		local 检测位置={
+			{x=112,y=916,color=0xbfbfae},{x=261,y=916,color=0xbfbfae},{x=392,y=916,color=0xbfbfae},
+			{x=587,y=916,color=0xbfbfae},{x=727,y=916,color=0xbfbfae},{x=868,y=916,color=0xbfbfae},
+			{x=1066,y=916,color=0xbfbfae},{x=1206,y=916,color=0xbfbfae},{x=1347,y=916,color=0xbfbfae},
+		}
+		local 技能检测位置={
+			{x=112,y=814,color=0xffffff},{x=261,y=814,color=0xffffff},{x=392,y=814,color=0xffffff},
+			{x=587,y=814,color=0xffffff},{x=727,y=814,color=0xffffff},{x=868,y=814,color=0xffffff},
+			{x=1066,y=814,color=0xffffff},{x=1206,y=814,color=0xffffff},{x=1347,y=814,color=0xffffff},
+		}
+		for _,v in pairs(技能策略) do
+			local p=point:new(技能检测位置[v])
+			p:getColor()
+			if p:getandCmpColor() then 
+				local diff=point:new(检测位置[v]):getDiff()
+				if diff.r>90 or diff.g>90 then
+					print(v.."cd中")
+				else
+					multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+					放技能()	
+				end
+			end
 		end
 	end
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-	for _,v in pairs(技能顺序) do
-		if v>=10 then point:new({x=1795,y=477}):Click(0.6) end
-		multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
-		放技能()	
+	if newRound then
+		print('释放技能')
+		for _,v in pairs(技能顺序) do
+			if v>=10 then point:new({x=1795,y=477}):Click(0.6) end
+			multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+			放技能()	
+		end
+		
+		print('重新释放技能')
+		_K:SwitchScreen()
+		重新释放技能()
+		_K:keepScreen(false)	
 	end
 	
-	if 识别敌方宝具策略 then 敌人宝具充能满(识别敌方宝具策略,index) end
+	if 识别敌方宝具策略 then 
+		_K:SwitchScreen()
+		敌人宝具充能满(识别敌方宝具策略,index)
+		_K:keepScreen(false)	
+	end
+	
 end
 
 function Behavior.释放宝具(index,bool)

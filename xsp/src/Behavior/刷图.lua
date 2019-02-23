@@ -291,8 +291,7 @@ AP不足:getDoingBehavior():setServer(
 	)
 释放技能:getDoingBehavior():setServer(
 	function(blackboard)
-		print("释放技能")
-		if  blackboard:getValue("是否为新回合")==true then behavior.释放技能(blackboard:getValue("当前关卡")) end
+		behavior.释放技能(blackboard:getValue("当前关卡"),blackboard:getValue("是否为新回合"))
 		blackboard:setValue("当前战斗流程","释放技能结束")
 	end
 	)
