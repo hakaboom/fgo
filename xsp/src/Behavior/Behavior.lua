@@ -33,12 +33,12 @@ function Behavior.选择助战()
 	local function 下滑距离()
 		local x=point:new({x=960,y=0})
 		local 一号位Y=multiPoint:new({Area={1232,248,1491,506},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
-		local 三号位Y=multiPoint:new({Area={1240,862,1492,1067},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()--0x3a6719
+		local 三号位Y=multiPoint:new({Area={1240,862,1492,1067},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
 			if not 三号位Y then 三号位Y=point:new({x=1322,y=965}) end
 			if not 一号位Y then 一号位Y=point:new({x=1322,y=365}) end
 			return {{x.x,三号位Y.y},{x.x,一号位Y.y}}
 	end 
-	local function 获取助战位置()--{{x=x1,y=y1},{x=x1,y=y2}}
+	local function 获取助战位置()
 		local Arry=_Arry.AppurtenantScaleMode
 		local 一号位=multiPoint:new({Area={1232,248,1491,506},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
 		local 二号位=multiPoint:new({Area={1241,566,1504,771},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
@@ -337,7 +337,7 @@ function Behavior.释放技能(index,newRound)
 		end
 	end
 	function 重新释放技能()
-		local 技能策略=		MainConfig[index.."CD冷却技能选择"]
+		local 技能策略=		keyToValueTable(MainConfig[index.."CD冷却技能选择"])
 		-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		local 检测位置={
 			{x=112,y=916,color=0xbfbfae},{x=261,y=916,color=0xbfbfae},{x=392,y=916,color=0xbfbfae},
@@ -352,7 +352,7 @@ function Behavior.释放技能(index,newRound)
 		for _,v in pairs(技能策略) do
 			local p=point:new(技能检测位置[v])
 			p:getColor()
-			if p:getandCmpColor() then 
+			if p:cmpColor() then 
 				local diff=point:new(检测位置[v]):getDiff()
 				if diff.r>90 or diff.g>90 then
 					print(v.."cd中")
@@ -371,19 +371,18 @@ function Behavior.释放技能(index,newRound)
 			multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
 			放技能()	
 		end
-		
-		print('重新释放技能')
-		_K:SwitchScreen()
-		重新释放技能()
-		_K:keepScreen(false)	
 	end
 	
+	print('重新释放技能')
+	_K:SwitchScreen()
+	重新释放技能()
+	_K:keepScreen(false)
+		
 	if 识别敌方宝具策略 then 
 		_K:SwitchScreen()
 		敌人宝具充能满(识别敌方宝具策略,index)
 		_K:keepScreen(false)	
-	end
-	
+	end	
 end
 
 function Behavior.释放宝具(index,bool)

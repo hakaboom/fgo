@@ -145,9 +145,9 @@ function point:getDiff()
 end
 
 function point:cmpColor()--比色
-local floor=math.floor
-local abs=math.abs
-if not self.DstColor then self:getColorEX() end
+	local floor=math.floor
+	local abs=math.abs
+	if not self.DstColor then self:getColorEX() end
 	local degree = floor(0xff * (100 - self.Degree) * 0.01)+0.5
 	local lr,lg,lb=self.DstColor.r,self.DstColor.g,self.DstColor.b
 	local r,g,b=floor(self.color/0x10000),floor(self.color%0x10000/0x100),floor(self.color%0x100)
