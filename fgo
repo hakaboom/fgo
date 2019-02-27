@@ -5,7 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 )	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\Print.lua	2;"	f
-,screen);调整顺序(mode);升降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	607;"	f
+,screen);调整顺序(mode);升降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	602;"	f
 AP回复(index)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	7;"	f
 AUTHOR_NOTE	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\JSON.lua	3;"	e
 AUTHOR_NOTE	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\JSON.lua	7;"	e
@@ -16,7 +16,7 @@ Area	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	311;"	e
 Area	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Data.lua	187;"	e
 Area	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\HUD.lua	7;"	e
 Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	42;"	e
-Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	609;"	e
+Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	605;"	e
 Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	7;"	e
 Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	190;"	e
 Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	59;"	e
@@ -25,7 +25,7 @@ Behavior	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	49;"	e
 Behavior.AP回复	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	7;"	f
 Behavior.resetTrigger	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	111;"	f
 Behavior.stop	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	91;"	f
-Behavior.使用道具	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	676;"	f
+Behavior.使用道具	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	672;"	f
 Behavior.取得卡牌信息	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	477;"	f
 Behavior.贩卖	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	517;"	f
 Behavior.选卡	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	413;"	f
@@ -59,7 +59,6 @@ ColorArea	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ˢͼ.lua	301;"	e
 ColorData	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	479;"	e
 ColorData	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	491;"	e
 ColorData	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	498;"	e
-ColorData	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	518;"	e
 Config	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	3;"	e
 Cur	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	6;"	e
 Cur	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	8;"	e
@@ -1003,8 +1002,8 @@ s	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	48;"	e
 s	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	52;"	e
 scene	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\main.lua	20;"	e
 scenes	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	193;"	e
-screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	591;"	e
-screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	601;"	e
+screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	586;"	e
+screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	596;"	e
 screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	28;"	e
 screen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	93;"	e
 scriptver	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	100;"	e
@@ -1070,7 +1069,7 @@ tableTojson	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	55;"	f
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	200;"	e
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	394;"	e
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	4;"	e
-tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	565;"	e
+tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	560;"	e
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	29;"	e
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	4;"	e
 tbl	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	3;"	e
@@ -1164,7 +1163,7 @@ width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	564;"	e
 width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	612;"	e
 width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	661;"	e
 x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	34;"	e
-x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	622;"	e
+x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	618;"	e
 x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	26;"	e
 x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\All.lua	109;"	e
 x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	12;"	e
@@ -1179,8 +1178,8 @@ x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	40;"	e
 x	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	8;"	e
 x1	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	48;"	e
 xper2pix(per)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	156;"	f
-y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	614;"	e
-y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	623;"	e
+y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	610;"	e
+y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	619;"	e
 y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	27;"	e
 y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\All.lua	110;"	e
 y	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\multipoint.lua	13;"	e
@@ -1196,13 +1195,13 @@ yper2pix(per)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	159;"	f
 三号位=multiPoint:new({index	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	253;"	e
 下滑距离	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	33;"	f
 二号位=multiPoint:new({index	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	252;"	e
-使用道具()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	676;"	f
+使用道具()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	672;"	f
 先发={第一位={x=209,y=512},第二位={x=503,y=519},第三位	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	256;"	e
 列表更新	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	65;"	f
 功能选择,	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	98;"	f
-升序={x=1859,y=214,color=0xf0ffff},降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	566;"	e
-升降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	564;"	f
-卖出	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	575;"	f
+升序={x=1859,y=214,color=0xf0ffff},降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	561;"	e
+升降序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	559;"	f
+卖出	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	570;"	f
 友情池抽卡检测()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	111;"	f
 取得克制关系	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	497;"	f
 取得助战关系	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	490;"	f
@@ -1221,7 +1220,7 @@ yper2pix(per)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	159;"	f
 等待回合结束()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	73;"	f
 等待战斗开始()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	50;"	f
 等待抽卡结束()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	121;"	f
-筛选	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	524;"	f
+筛选	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	519;"	f
 红	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	480;"	e
 绿	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	482;"	e
 获取助战位置	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	41;"	f
@@ -1231,8 +1230,8 @@ yper2pix(per)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	159;"	f
 识别	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	53;"	f
 识别下拉框	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	87;"	f
 识别当前关卡()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	62;"	f
-调整列表大小	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	570;"	f
-调整顺序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	552;"	f
+调整列表大小	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	565;"	f
+调整顺序	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	547;"	f
 贩卖(策略,nowfunction)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	517;"	f
 进入关卡()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	5;"	f
 选卡(卡牌Data,index)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	413;"	f
@@ -1242,6 +1241,3 @@ yper2pix(per)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	159;"	f
 释放技能(index,newRound)	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	204;"	f
 重回主页()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\scene.lua	35;"	f
 重新释放技能	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	339;"	f
-金	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	521;"	e
-铜	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	519;"	e
-银	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	520;"	e

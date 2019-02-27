@@ -515,11 +515,6 @@ function Behavior.取得卡牌信息(AreaTbl,index)
 end
 
 function Behavior.贩卖(策略,nowfunction)
-	local ColorData={
-		铜={{x=154,y=455,color=0x97876e},{x=252,y=456,color=0x8c7b62}},
-		银={{x=151,y=467,color=0xb3b3b3},{x=259,y=465,color=0xb2b2b2}},
-		金={x=816,y=437,color=0xfac103}
-	}	
 	local mode,screen
 	local function 筛选(mode,nowfunction,screen)
 	point:new({x=1471,y=196}):Click(1)--点击筛选
@@ -605,6 +600,7 @@ function Behavior.贩卖(策略,nowfunction)
 		策略="铜银狗粮"
 	end
 	筛选(mode,nowfunction,screen);调整顺序(mode);升降序("升序")
+	slp(1)
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	local Arry=_Arry.AppurtenantScaleMode
 	local 行间距,列间距=200*Arry,213*Arry
@@ -622,13 +618,13 @@ function Behavior.贩卖(策略,nowfunction)
 						local x= 第一行第一个.x+行间距*k
 						local y= 第一行第一个.y+列间距*i
 						clickTbl[#clickTbl+1]=point:new({x=x,y=y,mode=true})
-						if point:new({x=x,y=y,color=0x928269,mode=true}):getandCmpColor() then
+						if point:new({x=x,y=y,color=0x928269,mode=true,Degree=90}):getandCmpColor() then
 							Tbl[#Tbl+1]='铜';break
 						end
-						if point:new({x=x,y=y,color=0xb2b2b2,mode=true}):getandCmpColor() then
+						if point:new({x=x,y=y,color=0xb2b2b2,mode=true,Degree=90}):getandCmpColor() then
 							Tbl[#Tbl+1]='银';break
 						end
-						if point:new({x=x,y=y,color=0xdcb327,mode=true}):getandCmpColor() then
+						if point:new({x=x,y=y,color=0xdcb327,mode=true,Degree=90}):getandCmpColor() then
 							Tbl[#Tbl+1]='金';break
 						end	
 						Tbl[#Tbl+1]='无'
