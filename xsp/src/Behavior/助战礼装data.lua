@@ -325,4 +325,41 @@ Data['毒蛇一艺']={
 	{x=157,y=501,color=0x404048},
 	MainPoint={x=71,y=292},
 }
+-->>>>>>>>>>>>>>>>情人节2019
+Data['魔女厨房']={
+	{x=95,y=552,color=0xf9f9ff},
+	{x=107,y=543,color=0x9adced},
+	{x=149,y=543,color=0xfff3da},
+	{x=213,y=512,color=0xffffff},
+	{x=263,y=550,color=0xfff4db},
+	{x=227,y=538,color=0xffffff},
+	MainPoint={x=71,y=292},
+}
+Data['甜蜜之日']={
+	{x=131,y=849,color=0xeb92dc},
+	{x=142,y=842,color=0xe996de},
+	{x=234,y=811,color=0xed9adc},
+	{x=257,y=839,color=0xc459a4},
+	{x=308,y=832,color=0xbb6f88},
+	{x=299,y=852,color=0x9a79a3},
+	MainPoint={x=71,y=592},
+}
+Data['法老巧克力']={  
+	{x=90,y=499,color=0xf19ea7},
+	{x=108,y=482,color=0xe5000e},
+	{x=257,y=523,color=0xe5a379},
+	{x=242,y=501,color=0xe5a379},
+	{x=296,y=510,color=0x755ca7},
+	{x=172,y=492,color=0xffe0d8},
+	MainPoint={x=71,y=281},
+}
+Data['第一次的情人节']={
+	{x=88,y=518,color=0xe4c5e6},
+	{x=161,y=537,color=0xe0af8e},
+	{x=155,y=508,color=0xd3aa99},
+	{x=227,y=538,color=0xecb291},
+	{x=277,y=540,color=0xdcab9a},
+	{x=303,y=498,color=0xfeefe7},
+	MainPoint={x=71,y=292},
+}
 return Data
