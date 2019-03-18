@@ -354,12 +354,11 @@ Data['法老巧克力']={
 	MainPoint={x=71,y=281},
 }
 Data['第一次的情人节']={
-	{x=88,y=518,color=0xe4c5e6},
-	{x=161,y=537,color=0xe0af8e},
-	{x=155,y=508,color=0xd3aa99},
-	{x=227,y=538,color=0xecb291},
-	{x=277,y=540,color=0xdcab9a},
-	{x=303,y=498,color=0xfeefe7},
+	{x=155,y=506,color=0xd4ab9a},
+	{x=81,y=537,color=0xe5e5f0},
+	{x=230,y=534,color=0xecb291},
+	{x=302,y=495,color=0xfdeee6},
+	{x=159,y=537,color=0xe0af8e},
 	MainPoint={x=71,y=292},
 }
 return Data

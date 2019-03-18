@@ -27,6 +27,10 @@ if 配置["刘海屏适配"] then
 	y=Screen.Height
 	screen=x.."*"..y
 	local tbl={
+		['2244*1080']={
+				Top=0,Bottom=0,Left=86+119,Right=119,
+				Width=2280,Height=1080,		
+		},
 		['2248*1080']={
 				Top=0,Bottom=0,Left=90+118,Right=118,
 				Width=2280,Height=1080,		

@@ -62,7 +62,7 @@ ColorData	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\Behavior.lua	498;"
 Config	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	3;"	e
 Cur	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	6;"	e
 Cur	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	8;"	e
-CurScreen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	43;"	e
+CurScreen	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	47;"	e
 CurX	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	18;"	e
 CurX	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	27;"	e
 CurX	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	187;"	e
@@ -169,9 +169,9 @@ File:check	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\storage.lua	55;"	f
 File:new	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\storage.lua	5;"	f
 File:printpath	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\storage.lua	68;"	f
 Filename	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\storage.lua	9;"	e
-FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	58;"	e
-FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	68;"	e
-FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	71;"	e
+FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	62;"	e
+FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	72;"	e
+FunctionConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	75;"	e
 GetColorMode	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\main.lua	9;"	e
 HUD	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\HUD.lua	1;"	e
 HUD:hide	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\HUD.lua	25;"	f
@@ -190,7 +190,7 @@ LastLineFrontSize	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	189;"	e
 LoopCount	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	247;"	e
 LoopEndTrigger	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	198;"	e
 LoopTime	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	248;"	e
-MainConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	52;"	e
+MainConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	56;"	e
 MainConfig	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\System.lua	89;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战从者Data.lua	106;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战从者Data.lua	10;"	e
@@ -245,7 +245,7 @@ MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	3
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	336;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	345;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	354;"	e
-MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	363;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	362;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	37;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	46;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\助战礼装data.lua	55;"	e
@@ -365,6 +365,7 @@ Time	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\runTime.lua	6;"	e
 Top	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	31;"	e
 Top	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	35;"	e
 Top	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	39;"	e
+Top	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	43;"	e
 Top	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\main.lua	4;"	e
 Trigger	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	169;"	e
 Trigger:check	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Task.lua	184;"	f
@@ -396,6 +397,7 @@ White	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Tool\OCR.lua	11;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	32;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	36;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	40;"	e
+Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	44;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	119;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\按次数重复刷图.lua	3;"	e
 Width	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\配置UI.lua	3;"	e
@@ -449,12 +451,13 @@ Ypos	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	599;"	e
 Ypos	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	601;"	e
 Ypos	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	648;"	e
 Ypos	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	650;"	e
-["2280*1080"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	34;"	e
-["2340*1080"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	38;"	e
-['2248*1080']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	30;"	e
-_Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	45;"	e
-_Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	47;"	e
-_K	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	44;"	e
+["2280*1080"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	38;"	e
+["2340*1080"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	42;"	e
+['2244*1080']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	30;"	e
+['2248*1080']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	34;"	e
+_Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	49;"	e
+_Arry	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	51;"	e
+_K	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\init.lua	48;"	e
 _K	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\main.lua	12;"	e
 __dip	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	16;"	e
 __tostring()	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\JSON.lua	669;"	f
