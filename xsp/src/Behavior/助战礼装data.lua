@@ -361,4 +361,87 @@ Data['第一次的情人节']={
 	{x=159,y=537,color=0xe0af8e},
 	MainPoint={x=71,y=292},
 }
+-->>>>>>>>>>>>>>>>空境复刻
+Data['三重结界']={
+	{x=295,y=496,color=0xfee489},
+	{x=274,y=499,color=0xfde993},
+	{x=249,y=538,color=0x1c1c55},
+	{x=188,y=532,color=0x010212},
+	{x=124,y=524,color=0x160e37},
+	MainPoint={x=71,y=292},
+}
+Data['艳丽拳舞']={
+	{x=301,y=503,color=0x92c4d4},
+	{x=297,y=529,color=0xfff9f1},
+	{x=206,y=532,color=0xffe1b8},
+	{x=94,y=510,color=0xfdfdfd},
+	{x=264,y=546,color=0xfcfcf4},
+	MainPoint={x=71,y=292},
+}
+Data['重复魔术']={
+	{x=243,y=494,color=0x8a0600},
+	{x=295,y=503,color=0x5f0d01},
+	{x=212,y=538,color=0x502f1f},
+	{x=166,y=542,color=0xb15642},
+	{x=251,y=542,color=0xac3d25},
+	MainPoint={x=71,y=292},
+}
+Data['循环']={
+	{x=221,y=519,color=0xfdedcc},
+	{x=254,y=536,color=0x6f5f56},
+	{x=173,y=530,color=0xfdedc4},
+	{x=121,y=552,color=0xfeddbc},
+	{x=297,y=500,color=0xffffff},
+	{x=87,y=537,color=0xfefefe},
+	MainPoint={x=71,y=292},
+}
+Data['斩首兔女郎']={
+	{x=277,y=498,color=0xf1b7b7},
+	{x=263,y=512,color=0xfff9f9},
+	{x=181,y=530,color=0xfcecdb},
+	{x=130,y=505,color=0x543b33},
+	{x=275,y=528,color=0xfeefef},
+	MainPoint={x=71,y=292},
+}
+Data['夏日未来视']={
+	{x=186,y=528,color=0xf1f1f2},
+	{x=206,y=527,color=0xf5f5f5},
+	{x=140,y=504,color=0x77a0c1},
+	{x=99,y=549,color=0x1b2950},
+	{x=250,y=500,color=0x92b3d4},
+	MainPoint={x=71,y=292},
+}
+Data['歪曲魔眼']={
+	{x=190,y=515,color=0xf4ecdb},
+	{x=301,y=528,color=0x040c0c},
+	{x=277,y=510,color=0x050505},
+	{x=241,y=538,color=0x1d1515},
+	{x=115,y=509,color=0x0d7220},
+	MainPoint={x=71,y=292},
+}
+Data['短跑选手']={
+	{x=136,y=518,color=0xf9d8a7},
+	{x=128,y=535,color=0xdf8d5b},
+	{x=255,y=536,color=0xfff9c8},
+	{x=297,y=503,color=0xfed2a1},
+	{x=218,y=533,color=0xde945a},
+	MainPoint={x=71,y=292},
+}
+Data['老成之翁']={
+	{x=210,y=530,color=0xf9e9d8},
+	{x=182,y=528,color=0xf7e7d6},
+	{x=95,y=522,color=0x5f4fa1},
+	{x=261,y=511,color=0x07070f},
+	{x=132,y=549,color=0x504092},
+	{x=112,y=535,color=0x59499b},
+	MainPoint={x=71,y=292},
+}
+Data['冠位人偶师']={
+	{x=170,y=525,color=0xe9c8bf},
+	{x=100,y=521,color=0x0e0e1f},
+	{x=130,y=543,color=0xd7dfe5},
+	{x=246,y=521,color=0x0e2b54},
+	{x=295,y=525,color=0x13345e},
+	MainPoint={x=71,y=292},
+}
 return Data

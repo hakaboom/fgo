@@ -120,20 +120,30 @@ Data["æ³•å¸ˆ&ç‰§å¸ˆ"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ
 Data["æµ·ä¼¦å¨œ(Caster)"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½´ÓÕßData.lua	177;"	e
 Data["ç½—ç›å°¼çš„æ¬¾å¾…(é“œè¢‹)"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	109;"	e
 Data["é­…å½±ä¹‹å¤œ(è‹æ‰“ç³–)"]	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	174;"	e
+Data['ä¸‰é‡ç»“ç•Œ']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	365;"	e
 Data['å…°æ–¯æ´›ç‰¹(ç‹‚)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½´ÓÕßData.lua	152;"	e
+Data['å† ä½äººå¶å¸ˆ']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	439;"	e
+Data['å¤æ—¥æœªæ¥è§†']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	406;"	e
 Data['å¼•å¯¼è¿¦å‹’åº•çš„å°‘å¥³']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	302;"	e
 Data['å½­å¿’è¥¿å‹’äºš(CEO)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½´ÓÕßData.lua	143;"	e
+Data['å¾ªç¯']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	389;"	e
+Data['æ–©é¦–å…”å¥³éƒ']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	398;"	e
 Data['æ— æ…ˆæ‚²è€…']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	294;"	e
 Data['æŸ”è½¯çš„æ…ˆçˆ±']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	311;"	e
 Data['æ¬¢æ‚¦ç»µç¾Š(å†¥ç•Œä¹‹ç ‚)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	243;"	e
+Data['æ­ªæ›²é­”çœ¼']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	414;"	e
 Data['æ­»ä¹‹è‰ºæœ¯']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	277;"	e
 Data['æ¯’è›‡ä¸€è‰º']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	320;"	e
 Data['æ³•è€å·§å…‹åŠ›']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	347;"	e
 Data['æ´¾å¯¹æ—¶å…‰(äº¡è€…ä¹‹é“ƒ)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	259;"	e
 Data['ç”œèœœä¹‹æ—¥']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	338;"	e
+Data['çŸ­è·‘é€‰æ‰‹']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	422;"	e
 Data['ç¬¬ä¸€æ¬¡çš„æƒ…äººèŠ‚']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	356;"	e
 Data['ç¹æ˜Ÿä¹‹å¤œ(é›ªå®å®)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	251;"	e
+Data['è€æˆä¹‹ç¿']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	430;"	e
+Data['è‰³ä¸½æ‹³èˆ']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	373;"	e
 Data['è¿¦å‹’åº•çš„å­¦è€…']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	286;"	e
+Data['é‡å¤é­”æœ¯']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	381;"	e
 Data['é›ªç›—(è™šå¹»èœ¡çƒ›)']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	268;"	e
 Data['é­”å¥³å¨æˆ¿']	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	329;"	e
 DefaultAlign	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\UI\Z_ui.lua	125;"	e
@@ -246,7 +256,17 @@ MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	3
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	345;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	354;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	362;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	371;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	379;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	37;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	387;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	396;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	404;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	412;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	420;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	428;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	437;"	e
+MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	445;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	46;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	55;"	e
 MainPoint	C:/Users/sszz/Documents/GitHub/fgo/xsp/src\Behavior\ÖúÕ½Àñ×°data.lua	5;"	e

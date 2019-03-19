@@ -7,11 +7,11 @@ local 助战名单="无要求,列表第一个,列表第二个,列表第三个,�
 local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛,兰斯洛特(狂),彭忒西勒亚(CEO),葛饰北斋,"
 local 助战名单=助战名单..'阿比盖尔,水尼禄'
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
-local 礼装名单=礼装名单.."法老巧克力,第一次的情人节,甜蜜之日,魔女厨房"
+local 礼装名单=礼装名单.."老成之翁,冠位人偶师,艳丽拳舞,歪曲魔眼,短跑选手,重复魔术,三重结界,斩首兔女郎,夏日未来视,循环"
 
 local 主UI=UI:new(DevScreen,{align="left",w=95,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
 local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
-主功能选择:addLabel({text="[情人节2019]",size=60,align="center",w=90,color="255,0,0"})
+主功能选择:addLabel({text="[空境复刻]",size=60,align="center",w=90,color="255,0,0"})
 主功能选择:nextLine()
 主功能选择:addLabel({text="功能选择:",size=40,color="57,85,164"})
 主功能选择:addLabel({text="--运行前请去叉叉设置里选择运行时隐藏悬浮窗,选择了自动卖狗粮要先调整成一排7个的模式",size=25,color="255,0,0",ypos=2})
