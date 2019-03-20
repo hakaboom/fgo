@@ -538,7 +538,7 @@ function Behavior.贩卖(策略,nowfunction)
 				if screen[3] then point:new({x=1111,y=342}):Click(0.5) end
 				point:new({x=1257,y=956}):Click(1)--点击决定
 			else
-				multiPoint:new({{x=1254,y=828},{x=485,y=457},{x=1439,y=340},{x=1257,y=956}}):AllClick(0.5)
+				multiPoint:new({{x=1254,y=828},{x=810,y=457},{x=485,y=457},{x=1439,y=340},{x=1257,y=956}}):AllClick(0.5)
 			end
 		else
 			dialog("筛选错误");lua_exit()
