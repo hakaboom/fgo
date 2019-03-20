@@ -1,4 +1,4 @@
-require("UI.Z_ui")
+require("__UI.Z_ui")
 local DevScreen={
 	Width=1920,
 	Height=1080,
@@ -7,7 +7,7 @@ local 配置名称=File:new("init.txt")
 配置名称:check({"配置1","配置2","配置3","配置4","配置5"})
 local str=配置名称:ReadByJsontoStr()	
 local data=_K:getSystemData("fgo")
-local 主UI=UI:new(DevScreen,{align="left",w=90,h=90,size=20,cancelname="取消",okname="OK",countdown=0,config="",xpos=2})
+local 主UI=ZUI:new(DevScreen,{align="left",w=90,h=90,size=20,cancelname="取消",okname="OK",countdown=0,config="",xpos=2})
 local 主配置=Page:new(主UI,{text="主功能选择",size=20})
 --主配置:addLabel({text="安卓用户可以进群下载2.0引擎版本小精灵,速度会比现在的快哟",size=50,align="Left",w=90,color="255,0,0"})
 主配置:nextLine() 

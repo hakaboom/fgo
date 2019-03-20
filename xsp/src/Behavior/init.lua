@@ -1,4 +1,4 @@
-local 配置=show_UI("UI.配置UI")
+local 配置=show_UI("__UI.配置UI")
 if not 配置 then  print("退出脚本") lua_exit() end
 local Config=File:new("init.txt")
 local tbl=Config:ReadByJson()
@@ -53,13 +53,13 @@ end
 UI配置文件=tbl[配置.配置选择]
 Config:WriteNewByJson(tbl)
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-MainConfig=show_UI("UI.主UI")
+MainConfig=show_UI("__UI.主UI")
 if not MainConfig then print("退出脚本")lua_exit() end
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Print(">>>>>>>>>>>>>>>>>>选择功能:"..MainConfig.功能选择)
 local 当前功能=MainConfig.功能选择
 if 当前功能=="按次数重复刷图" then
-	FunctionConfig=show_UI("UI."..MainConfig.功能选择)
+	FunctionConfig=show_UI("__UI."..MainConfig.功能选择)
 	if FunctionConfig.次数选择=="执行框内次数" then 
 		FunctionConfig["刷图次数"]=FunctionConfig.手动刷图次数 
 		else
@@ -69,10 +69,10 @@ if 当前功能=="按次数重复刷图" then
 elseif 当前功能=="自动抽无限池" then
 	require("Behavior.自动抽无限池")
 elseif 当前功能=="自动贩卖" then
-	FunctionConfig=show_UI("UI."..MainConfig.功能选择)
+	FunctionConfig=show_UI("__UI."..MainConfig.功能选择)
 	require("Behavior.自动贩卖")
 elseif 当前功能=="自动抽友情" then
-	FunctionConfig=show_UI("UI."..MainConfig.功能选择)
+	FunctionConfig=show_UI("__UI."..MainConfig.功能选择)
 	require("Behavior.自动抽友情")
 end
 print(">>>>>>>>>>>>>>>>>>>UI结束")

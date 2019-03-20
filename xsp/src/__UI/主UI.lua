@@ -1,4 +1,4 @@
-require("UI.Z_ui")
+require("__UI.Z_ui")
 local DevScreen={
 	Width=1920,
 	Height=1080,
@@ -9,7 +9,7 @@ local 助战名单=助战名单..'阿比盖尔,水尼禄'
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
 local 礼装名单=礼装名单.."老成之翁,冠位人偶师,艳丽拳舞,歪曲魔眼,短跑选手,重复魔术,三重结界,斩首兔女郎,夏日未来视,循环"
 
-local 主UI=UI:new(DevScreen,{align="left",w=95,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
+local 主UI=ZUI:new(DevScreen,{align="left",w=95,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
 local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
 主功能选择:addLabel({text="[空境复刻]",size=60,align="center",w=90,color="255,0,0"})
 主功能选择:nextLine()

@@ -1,9 +1,9 @@
-require("UI.Z_ui")
+require("__UI.Z_ui")
 local DevScreen={
 	Width=1920,
 	Height=1080,
 }	
-local 主UI=UI:new(DevScreen,{align="left",w=90,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件.."贩卖.dat",xpos=2})
+local 主UI=ZUI:new(DevScreen,{align="left",w=90,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件.."贩卖.dat",xpos=2})
 local 自动贩卖=Page:new(主UI,{text="自动贩卖",size=20})
 自动贩卖:addLabel({text="自动贩卖",size=60,align="center",w=100,color="255,0,0"})
 自动贩卖:nextLine(1) 

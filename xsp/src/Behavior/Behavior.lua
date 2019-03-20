@@ -520,7 +520,7 @@ function Behavior.贩卖(策略,nowfunction)
 	point:new({x=1471,y=196}):Click(1)--点击筛选
 		if mode=="从者" then
 			if nowfunction=="自动贩卖" or mowfunction=="自动抽友情" then
-				point:new({x=1254,y=828}):Click(0.5)--点击全部取消
+				point:new({x=1254,y=828}):Click(1)--点击全部取消
 				point:new({x=313,y=584}):Click(0.5)--点击标记状态外
 				if screen[1] then point:new({x=1275,y=453}):Click(0.5) end --狗粮
 				if screen[2] then point:new({x=1598,y=462}):Click(0.5) end --芙芙

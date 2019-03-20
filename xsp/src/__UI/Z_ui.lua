@@ -85,10 +85,10 @@ local function tableTojson(t)
 	return serialize(t)
 end
 
-UI={
+ZUI={
 }
 
-function UI:new(DevScreen,Parm)
+function ZUI:new(DevScreen,Parm)
 	
 	local _width,_height = getScreenSize()--当前设备分辨率
 	if _width<_height then _width,_height=_height,_width end
@@ -153,10 +153,10 @@ function UI:new(DevScreen,Parm)
 	return o
 end
 
-function UI:xper2pix(per)
+function ZUI:xper2pix(per)
 	return math.floor(per/100*self.realwidth)
 end
-function UI:yper2pix(per)
+function ZUI:yper2pix(per)
 	return math.floor(per/100*self.realheight)
 end
 
@@ -682,7 +682,7 @@ function Page:addComboBox(Parm)
 	self.UI.ret[Parm.id].type="ComboBox"
 end
 
-function UI:show(ReturnType)
+function ZUI:show(ReturnType)
 local json=require("JSON")
 	if self.id==1 then
 		local tbl=TableCopy(self.con.views[1].views)
