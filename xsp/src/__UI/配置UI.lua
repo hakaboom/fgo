@@ -3,17 +3,23 @@ local DevScreen={
 	Width=1920,
 	Height=1080,
 }
+local UIconfig=File:new('UIconfig.txt')
+UIconfig:check({
+	index=0,
+	刘海=0,
+})
+local UIconfig=UIconfig:ReadByJson()
+
 local 配置名称=File:new("init.txt")
 配置名称:check({"配置1","配置2","配置3","配置4","配置5"})
 local str=配置名称:ReadByJsontoStr()	
 local data=_K:getSystemData("fgo")
 local 主UI=ZUI:new(DevScreen,{align="left",w=90,h=90,size=20,cancelname="取消",okname="OK",countdown=0,config="",xpos=2})
 local 主配置=Page:new(主UI,{text="主功能选择",size=20})
---主配置:addLabel({text="安卓用户可以进群下载2.0引擎版本小精灵,速度会比现在的快哟",size=50,align="Left",w=90,color="255,0,0"})
 主配置:nextLine() 
 主配置:addLabel({text="选择配置文件:",size=30,align="Left",w=90,color="0,0,0"})
 主配置:nextLine() 
-主配置:addRadioGroup({id="配置选择",list=str,select=0,size=25,w=100,h=10,color="0,0,255"})
+主配置:addRadioGroup({id="配置选择",list=str,select=UIconfig.index,size=25,w=100,h=10,color="0,0,255"})
 主配置:nextLine() 
 主配置:addCheckBoxGroup({id="更改配置名称",list="更改配置名称",select="1",size=25,w=20,h=10,color="0,0,255"})
 主配置:addEdit({id="更改名称",prompt="这里输入需要改的名称",kbtype="default",select="1",size=25,w=40,h=10,color="0,0,0",ypos=-2})
@@ -22,8 +28,9 @@ local 主配置=Page:new(主UI,{text="主功能选择",size=20})
 主配置:addCheckBoxGroup({id="是否删除配置",list="是否删除配置",select="1",size=25,w=20,h=10,color="0,0,255"})
 主配置:addLabel({text="--修改配置的更改会在下次运行生效",size=30,align="Left",w=50,color="0,0,0"})
 主配置:nextLine(1.2) 
-主配置:addCheckBoxGroup({id="刘海屏适配",list="刘海屏适配",select="1",size=25,w=20,h=10,color="0,0,255"})
-主配置:addLabel({text="--部分情况需要开启,没有收集到的情况请私聊",size=30,align="Left",w=50,color="0,0,0"})
+
+主配置:addLabel({text="刘海屏适配:",size=30,align="Left",color="0,0,0",ypos=2})
+主配置:addComboBox({id="刘海屏适配",list="不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,2340*1080",select=UIconfig.刘海,size=30,w=30,h=10})
 主配置:nextLine(1.2) 
 主配置:addLabel({text="觉得好用就打赏下吧:",size=25})
 主配置:addImage({src="打赏.jpg",w=35,h=75})

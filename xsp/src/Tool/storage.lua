@@ -13,6 +13,14 @@ function File:new(filename,Path)	--File:new("userconfig","自定义路径")
 	return o
 end
 
+function File:Write(data)
+	local file=io.open(self.Path,"w+")
+	assert(file,"path of the file don't exist or can't open")
+	file:write(data)
+	file:flush()
+	file:close()
+end
+
 function File:WriteNewByJson(tbl)			--以Json格式写入文件{["xxxxx"]="123",["aaaaaa"]=true}
 	local json=require("JSON")
 	local file=io.open(self.Path,"w+")
@@ -42,6 +50,14 @@ function File:ReadByJson()					--读取Json格式的文件
 	return tbl
 end
 
+function File:ReadFile()
+	local file=io.open(self.Path,"r")
+	assert(file,"path of the file don't exist or can't open")
+	local data=file:read("*a")
+	file:close()
+	return data
+end
+
 function File:ChangeFileName(filename)		--重设文件名
 	self.Filename=filename
 end
@@ -65,6 +81,16 @@ function File:check(data)
 	end
 end
 
+function File:checkFile(newBuild)
+	if io.open(self.Path,"r")==nil then
+		if newBuild then
+			io.open(self.Path,"w"):close()
+		end
+		return false
+	end
+	return true
+end
+
 function File:printpath()					--打印当前文件路径
-	printf("路径为 : %s",xmod.resolvePath(self.Path))
+	printf("路径为 : %s",self.Path)
 end

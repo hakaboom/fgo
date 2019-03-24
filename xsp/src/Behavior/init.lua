@@ -3,53 +3,85 @@ if not 配置 then  print("退出脚本") lua_exit() end
 local Config=File:new("init.txt")
 local tbl=Config:ReadByJson()
 
+local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,2340*1080
+	['2244*1080']={
+			Top=0,Bottom=0,Left=86+119,Right=119,
+			Width=2280,Height=1080,value=2,
+	},
+	['2248*1080']={
+			Top=0,Bottom=0,Left=90+118,Right=118,
+			Width=2280,Height=1080,value=3,
+	},
+	["2280*1080"]={
+			Top=0,Bottom=0,Left=80+140,Right=140,
+			Width=2280,Height=1080,value=4,
+	},
+	["2340*1080"]={
+			Top=0,Bottom=0,Left=85+160,Right=160,
+			Width=2340,Height=1080,value=5,
+	},
+	['红米note7(2340*1080)']={
+			Top=0,Bottom=0,Left=80+170,Right=170,
+			Width=2340,Height=1080,value=1,	
+	},
+	['不选择']={
+		value=0,
+	},
+}
+local 刘海选项=配置["刘海屏适配"]
+if 刘海选项~='不选择' then
+	local CurScreen=适配[刘海选项]
+	_K=System:new(DevScreen,CurScreen,1,"Height","Height")
+	_Arry=_K:getArry()
+else
+	_Arry=_K:getArry()
+end
+
+local file=File:new('UIconfig.txt')
+file:WriteNewByJson({
+	index=配置.配置选择-1,
+	刘海=适配[刘海选项].value,
+})
+
+
 if 配置["是否增加配置"] then
 	table.insert(tbl,"新配置"..math.random(200))
 end
 
 if 配置["是否删除配置"] then
 	if #tbl<=1 then dialog('只剩一个配置了');lua_exit() end
+	local fileName = tbl[配置.配置选择]
 	table.remove(tbl,配置.配置选择)
-	File:new(配置.配置选择..".dat"):ClearFile()
+	if xmod then
+		os.remove(xmod.getPrivatePath()..'/'..fileName ..'.dat')
+	else
+		File:new(fileName..'.dat'):ClearFile()
+	end
 	Config:WriteNewByJson(tbl)
 	dialog('删除配置,请重启')
 	lua_exit()
 end
 
 if 配置["更改配置名称"] then
+	if xmod then
+		local oldName = xmod.getPrivatePath()..'/'.. tbl[配置.配置选择] ..'.dat'
+		local newName = xmod.getPrivatePath()..'/'.. 配置.更改名称 ..'.dat'
+		os.rename(oldName,newName)
+	else
+		local oldFile = File:new(tbl[配置.配置选择]..'.dat')
+		if oldFile:checkFile() then
+			local data = oldFile:ReadFile()
+			local file=File:new(配置.更改名称..'.dat')
+			if not file:checkFile(true) then
+				file:Write(data)
+			end
+			oldFile:ClearFile()
+		end
+	end
 	tbl[配置.配置选择]=配置.更改名称
 end
 
-if 配置["刘海屏适配"] then
-	local Screen=_K:getCurScreen()
-	local x,y,screen
-	x=Screen.Width
-	y=Screen.Height
-	screen=x.."*"..y
-	local tbl={
-		['2244*1080']={
-				Top=0,Bottom=0,Left=86+119,Right=119,
-				Width=2280,Height=1080,		
-		},
-		['2248*1080']={
-				Top=0,Bottom=0,Left=90+118,Right=118,
-				Width=2280,Height=1080,		
-		},
-		["2280*1080"]={
-				Top=0,Bottom=0,Left=80+140,Right=140,
-				Width=2280,Height=1080,
-		},
-		["2340*1080"]={
-				Top=0,Bottom=0,Left=85+160,Right=160,
-				Width=2340,Height=1080,
-		},
-	}
-	local CurScreen=tbl[screen]
-	_K=System:new(DevScreen,CurScreen,1,"Height","Height")
-	_Arry=_K:getArry()
-else
-	_Arry=_K:getArry()
-end
+
 UI配置文件=tbl[配置.配置选择]
 Config:WriteNewByJson(tbl)
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
