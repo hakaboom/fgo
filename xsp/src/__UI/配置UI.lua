@@ -9,7 +9,6 @@ UIconfig:check({
 	刘海=0,
 })
 local UIconfig=UIconfig:ReadByJson()
-
 local 配置名称=File:new("init.txt")
 配置名称:check({"配置1","配置2","配置3","配置4","配置5"})
 local str=配置名称:ReadByJsontoStr()	
@@ -30,7 +29,7 @@ local 主配置=Page:new(主UI,{text="主功能选择",size=20})
 主配置:nextLine(1.2) 
 
 主配置:addLabel({text="刘海屏适配:",size=30,align="Left",color="0,0,0",ypos=2})
-主配置:addComboBox({id="刘海屏适配",list="不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,2340*1080",select=UIconfig.刘海,size=30,w=30,h=10})
+主配置:addComboBox({id="刘海屏适配",list="不选择,红米note7(不显示刘海),红米note7(显示刘海),2244*1080,2248*1080,2280*1080,2340*1080",select=UIconfig.刘海,size=30,w=30,h=10})
 主配置:nextLine(1.2) 
 主配置:addLabel({text="觉得好用就打赏下吧:",size=25})
 主配置:addImage({src="打赏.jpg",w=35,h=75})

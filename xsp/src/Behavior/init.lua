@@ -6,23 +6,27 @@ local tbl=Config:ReadByJson()
 local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,2340*1080
 	['2244*1080']={
 			Top=0,Bottom=0,Left=86+119,Right=119,
-			Width=2280,Height=1080,value=2,
+			Width=2280,Height=1080,value=3,
 	},
 	['2248*1080']={
 			Top=0,Bottom=0,Left=90+118,Right=118,
-			Width=2280,Height=1080,value=3,
+			Width=2280,Height=1080,value=4,
 	},
 	["2280*1080"]={
 			Top=0,Bottom=0,Left=80+140,Right=140,
-			Width=2280,Height=1080,value=4,
+			Width=2280,Height=1080,value=5,
 	},
 	["2340*1080"]={
 			Top=0,Bottom=0,Left=85+160,Right=160,
-			Width=2340,Height=1080,value=5,
+			Width=2340,Height=1080,value=6,
 	},
-	['红米note7(2340*1080)']={
+	['红米note7(不显示刘海)']={
 			Top=0,Bottom=0,Left=80+170,Right=170,
 			Width=2340,Height=1080,value=1,	
+	},
+	['红米note7(显示刘海)']={
+			Top=0,Bottom=0,Left=210,Right=210,
+			Width=2340,Height=1080,value=2,	
 	},
 	['不选择']={
 		value=0,
