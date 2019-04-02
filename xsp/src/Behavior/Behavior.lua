@@ -575,7 +575,11 @@ function Behavior.贩卖(策略,nowfunction)
 	end
 	tbl.灵基变还:WaitScreen("灵基变还")
 	
-	if point:new({x=162,y=219,color=0xc12d35}):getandCmpColor() then mode="从者" else mode="礼装" end
+	if point:new({x=256,y=189,color=0xf7c618}):getandCmpColor() then 
+		mode="从者" 
+	elseif point:new({x=328,y=186,color=0xebb125}):getandCmpColor() then
+		mode="礼装" 
+	end
 	if nowfunction=="按次数重复刷图" then 
 		if 策略=="停止脚本" then lua_exit() end
 	elseif nowfunction=="自动抽友情" then

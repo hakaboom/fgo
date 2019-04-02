@@ -45,6 +45,7 @@ local file=File:new('UIconfig.txt')
 file:WriteNewByJson({
 	index=配置.配置选择-1,
 	刘海=适配[刘海选项].value,
+	fgo版本选择 = 配置.fgo版本选择 == '序章前' and 1 or 0,
 })
 
 

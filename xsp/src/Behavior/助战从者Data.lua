@@ -15,7 +15,7 @@ Data.诸葛孔明={
 	{x=88,y=712,color=0xbaf4db},
 	{x=88,y=761,color=0xa3f5ed},
 	{x=140,y=776,color=0x2c3d2c},
-	{x=297,y=712,color=0xd3954f},
+	{x=294,y=673,color=0x92f8e9},
 	{x=127,y=678,color=0x272f2f},
 	MainPoint={x=71,y=592},
 }

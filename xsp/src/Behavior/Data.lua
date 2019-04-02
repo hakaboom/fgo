@@ -2,11 +2,11 @@ local Data={
 }
 
 Data.主页面=multiPoint:new({
-	{x=1703,y=1022,color=0xdddddd},
-	{x=98,y=59,color=0xd8d8d8},
-	{x=633,y=1028,color=0xe03b23},
-	{x=650,y=1024,color=0x990303},
-	{x=1868,y=1035,color=0xdcdcdc},
+	{x=92,y=56,color=0xd8d8d8},
+	{x=223,y=67,color=0xd6d6d6},
+	{x=644,y=1029,color=0xdf3a21},
+	{x=1708,y=1021,color=0xd6d6d6},
+	{x=1859,y=1017,color=0xdadbdb},
 	index={1180,237,1549,334},
 	_tag="主页面",
 })
@@ -21,42 +21,40 @@ Data.游戏公告=multiPoint:new({
 	_tag="游戏公告",
 })
 Data.助战选择页面=multiPoint:new({
-	{x=33,y=192,color=0xf4f4f5},
-	{x=98,y=63,color=0xd5d5d6},
-	{x=215,y=47,color=0xe2e3e3},
-	{x=1518,y=56,color=0x3e759f},
-	{x=1898,y=866,color=0x1a335c},
-	{x=16,y=945,color=0x2b3388},
-	{x=1893,y=1061,color=0x143274},
-	{x=1198,y=196,color=0x01c5f6},
+	{x=98,y=48,color=0xe0e1e1},
+	{x=236,y=68,color=0xd6d7d7},
+	{x=1024,y=185,color=0x02c8f9},
+	{x=1144,y=188,color=0x0bb7f1},
+	{x=1200,y=192,color=0x05bef6},
+	{x=1315,y=190,color=0x0dbbfa},
+	{x=1588,y=189,color=0x0056a9},
 	_tag="助战选择页面",
 })
 Data.仓库到上限=multiPoint:new({
-	{x=430,y=713,color=0xd5d5d6},
-	{x=833,y=703,color=0xdbdbdb},
-	{x=1265,y=717,color=0xd2d2d3},
-	{x=834,y=847,color=0xd2d2d3},
-	{x=960,y=460,color=0x262626},
+	{x=392,y=709,color=0xd5d6d6},
+	{x=627,y=714,color=0xd5d6d6},
+	{x=854,y=709,color=0xd6d6d6},
+	{x=1080,y=706,color=0xd9d9d9},
+	{x=1247,y=710,color=0xd5d6d6},
+	{x=1545,y=710,color=0xd3d4d4},
+	{x=860,y=846,color=0xd4d4d5},
 	_tag="仓库到上限",
 })
 Data.AP回复=multiPoint:new({
-	{x=666,y=101,color=0x243c61},
-	{x=1431,y=101,color=0x263e62},
-	{x=1623,y=415,color=0x2c405e},
-	{x=1525,y=421,color=0xe5e5ed},
-	{x=1050,y=938,color=0xd5d6d7},
-	{x=847,y=918,color=0xdadada},
-	{x=288,y=892,color=0x283e65},
-	{x=402,y=747,color=0x17253c},
+	{x=1526,y=215,color=0xf4f4f4},
+	{x=1521,y=403,color=0xeaeef6},
+	{x=1522,y=578,color=0xefeff7},
+	{x=848,y=929,color=0xd4d5d5},
+	{x=1057,y=919,color=0xdadadb},
 	_tag="AP回复",
 })
 Data.队伍确认=multiPoint:new({
-	{x=99,y=51,color=0xdbdcdc},
-	{x=1865,y=192,color=0xececec},
-	{x=57,y=192,color=0xececec},
-	{x=1784,y=1053,color=0xe4eaed},
-	{x=1597,y=1003,color=0x132044},
-	{x=701,y=983,color=0x7e0303},
+	{x=93,y=47,color=0xe1e2e2},
+	{x=226,y=50,color=0xdddddd},
+	{x=671,y=118,color=0x0d0e17},
+	{x=651,y=1015,color=0xe00a5c},
+	{x=1782,y=977,color=0xf6f6f6},
+	{x=254,y=1015,color=0x06edfd},
 	_tag="队伍确认",
 })
 Data.战斗主页=multiPoint:new({
@@ -70,25 +68,18 @@ Data.战斗主页=multiPoint:new({
 	_tag="战斗主页",
 })
 Data.更新助战列表=multiPoint:new({
-	{x=352,y=186,color=0x2a3b5b},
-	{x=1466,y=186,color=0x2c3d55},
-	{x=1568,y=885,color=0x293962},
-	{x=352,y=832,color=0x30446d},
-	{x=526,y=836,color=0xdadada},
-	{x=1410,y=837,color=0xd7d7d7},
-	{x=745,y=848,color=0xd0d0d1},
-	{x=1162,y=847,color=0xd4d4d5},
-	{x=923,y=633,color=0x25252d},
+	{x=505,y=842,color=0xd5d6d6},
+	{x=562,y=844,color=0xd4d5d5},
+	{x=785,y=845,color=0xd2d2d3},
+	{x=1152,y=841,color=0xd5d6d6},
+	{x=1419,y=843,color=0xd0d0d1},
 	_tag="更新助战列表",
 })
 Data.更新助战失败=multiPoint:new({
-	{x=345,y=181,color=0x2c3b5c},
-	{x=1540,y=180,color=0x2b3b5c},
-	{x=1428,y=885,color=0x2a3b53},
-	{x=431,y=881,color=0x2c3d55},
-	{x=838,y=836,color=0xd7d7d7},
-	{x=1080,y=835,color=0xdbdbdb},
-	{x=330,y=633,color=0x2d4576},
+	{x=800,y=833,color=0xdcdcdc},
+	{x=875,y=836,color=0xd9d9d9},
+	{x=1055,y=839,color=0xd2d3d3},
+	{x=1114,y=839,color=0xd4d5d5},
 	_tag="更新助战失败",
 })
 Data.技能多选框=multiPoint:new({
@@ -150,13 +141,11 @@ Data.换人礼装=multiPoint:new({
 	_tag="换人礼装",
 })
 Data.灵基变还=multiPoint:new({
-	{x=102,y=65,color=0xd2d2d3},
-	{x=1572,y=101,color=0x99afad},
-	{x=1741,y=548,color=0x152141},
-	{x=1716,y=710,color=0x151e3b},
-	{x=1705,y=892,color=0x131e3b},
-	{x=44,y=718,color=0xd0e1f1},
-	{x=79,y=561,color=0x12c8f9},
+	{x=92,y=57,color=0xd7d8d8},
+	{x=228,y=54,color=0xdadada},
+	{x=76,y=561,color=0x10c0f1},
+	{x=43,y=716,color=0xd0e1f1},
+	{x=1598,y=186,color=0x0056a0},
 	_tag="灵基变还"
 })
 Data.HUD=multiPoint:new({
@@ -177,10 +166,10 @@ Data.筛选从者=multiPoint:new({
 	{x=1597,y=345},{x=327,y=467},{x=649,y=463},{x=976,y=460},
 })
 Data.等待变还页面=multiPoint:new({
-	{x=865,y=872,color=0xd7d7d7},
-	{x=1064,y=875,color=0xd5d6d6},
-	{x=262,y=65,color=0x26365f},
-	{x=1649,y=1021,color=0x273761},
+	{x=810,y=867,color=0xdbdcdc},
+	{x=867,y=867,color=0xdadbdb},
+	{x=1059,y=872,color=0xd7d8d8},
+	{x=1114,y=872,color=0xd3d4d4},
 	_tag="等待变还页面",
 })
 Data.助战下拉条=multiPoint:new({
@@ -191,19 +180,22 @@ Data.助战下拉条=multiPoint:new({
 })
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Data.友情池=multiPoint:new({
-	{x=104,y=66,color=0xd0d1d2},
-	{x=258,y=920,color=0x03c1fa},
-	{x=1852,y=1029,color=0xdcdcdc},
-	{x=741,y=636,color=0x0e6992},
-	{x=1219,y=628,color=0x1679a3},
+	{x=97,y=59,color=0xd7d7d7},
+	{x=224,y=58,color=0xd7d8d8},
+	{x=1705,y=1021,color=0xd5d5d5},
+	{x=70,y=916,color=0x128ed0},
+	{x=1063,y=944,color=0xa2e64d},
 	_tag="友情池"
 })
 Data.友情池决定召唤=multiPoint:new({
-	{x=1397,y=847,color=0xcfd0d0},
-	{x=1346,y=847,color=0xd4d4d5},
-	{x=826,y=843,color=0xd1d1d1},
-	{x=566,y=842,color=0xd6d6d7},
-	{x=953,y=515,color=0x232323},
+	{x=504,y=836,color=0xd8d9d9},
+	{x=558,y=837,color=0xd8d8d9},
+	{x=748,y=840,color=0xd7d7d7},
+	{x=807,y=842,color=0xd4d4d4},
+	{x=1112,y=836,color=0xdadadb},
+	{x=1175,y=837,color=0xd9d9d9},
+	{x=1333,y=839,color=0xd9d9d9},
+	{x=1397,y=842,color=0xd3d4d4},
 	_tag="友情池决定召唤",
 })
 Data.友情池_召唤结束=multiPoint:new({
