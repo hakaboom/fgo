@@ -180,11 +180,11 @@ Data.助战下拉条=multiPoint:new({
 })
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Data.友情池=multiPoint:new({
-	{x=97,y=59,color=0xd7d7d7},
-	{x=224,y=58,color=0xd7d8d8},
-	{x=1705,y=1021,color=0xd5d5d5},
-	{x=70,y=916,color=0x128ed0},
-	{x=1063,y=944,color=0xa2e64d},
+	{x=236,y=920,color=0x0ea0ea},
+	{x=68,y=920,color=0x1090d2},
+	{x=96,y=48,color=0xe1e1e1},
+	{x=1701,y=1027,color=0xd7d9da},
+	{x=742,y=637,color=0x0b668f},
 	_tag="友情池"
 })
 Data.友情池决定召唤=multiPoint:new({

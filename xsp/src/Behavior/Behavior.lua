@@ -32,16 +32,16 @@ function Behavior.选择助战()
 	local 从者data,礼装data=require("Behavior.助战从者Data"),require("Behavior.助战礼装data")
 	local function 下滑距离()
 		local x=point:new({x=960,y=0})
-		local 一号位Y=multiPoint:new({Area={1232,248,1491,506},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
-		local 三号位Y=multiPoint:new({Area={1240,862,1492,1067},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
+		local 一号位Y=multiPoint:new({Area={1232,248,1491,506},{x=1255,y=367,color=0x386717},{x=1354,y=367,color=0x509739},vidr=1}):findColor()
+		local 三号位Y=multiPoint:new({Area={1240,862,1492,1067},{x=1255,y=367,color=0x386717},{x=1354,y=367,color=0x509739},vidr=1}):findColor()
 			if not 三号位Y then 三号位Y=point:new({x=1322,y=965}) end
 			if not 一号位Y then 一号位Y=point:new({x=1322,y=365}) end
 			return {{x.x,三号位Y.y},{x.x,一号位Y.y}}
 	end 
 	local function 获取助战位置()
 		local Arry=_Arry.AppurtenantScaleMode
-		local 一号位=multiPoint:new({Area={1232,248,1491,506},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
-		local 二号位=multiPoint:new({Area={1241,566,1504,771},{x=1262,y=355,color=0x4a7a33},vidr=1}):findColor()
+		local 一号位=multiPoint:new({Area={1232,248,1491,506},{x=1255,y=367,color=0x386717},{x=1354,y=367,color=0x509739},vidr=1}):findColor()
+		local 二号位=multiPoint:new({Area={1241,566,1504,771},{x=1255,y=367,color=0x386717},{x=1354,y=367,color=0x509739},vidr=1}):findColor()
 		if not 一号位 then 一号位=point:new({x=1322,y=365}) end
 		if not 二号位 then 二号位=point:new({x=1322,y=665}) end
 		local index={{x=一号位.x-200*Arry,y=一号位.y,mode=true},{x=二号位.x-200*Arry,y=二号位.y,mode=true}}
@@ -54,7 +54,7 @@ function Behavior.选择助战()
 		if data==nil or data==false then return true end --代表选择了无要求和列表前几
 		local data=TableCopy(data)
 		data.DstMainPoint=area
-		data.Degree=data.Degree or 95
+		data.Degree=data.Degree or 90
 		data._tag=name
 		local aim,err,ret=multiPoint:new(data):getandCmpColor()
 		if aim==true then

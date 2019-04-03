@@ -1,9 +1,9 @@
 local Data={}
 Data.满破={
-	{x=289,y=534,color=0xfcfc65},
-	{x=292,y=538,color=0xf8f8ae},
-	MainPoint={x=71,y=292},
-	Degree=85,
+	{x=287,y=833,color=0xffff2f,DiffColor='0x151546'},
+	{x=288,y=842,color=0x9ad177},
+	MainPoint={x=71,y=592},
+	Degree=80,
 }
 Data.好友={
 	{x=1722,y=474,color=0xe0ffa8},
@@ -29,11 +29,12 @@ Data["2030年的碎片"]={
 	MainPoint={x=71,y=332},
 }
 Data.蒙娜丽莎={
-	{x=202,y=825,color=0xf6d5a4},
-	{x=161,y=817,color=0x0e2737},
-	{x=89,y=839,color=0xbb8a69},
-	{x=307,y=850,color=0x2129a5},
-	{x=148,y=815,color=0xffffff},
+	{x=203,y=822,color=0xf9d6a2},
+	{x=183,y=824,color=0xf8d59f},
+	{x=194,y=795,color=0xfad49b},
+	{x=88,y=843,color=0xbd8b6b},
+	{x=148,y=815,color=0xfdfdfd},
+	{x=306,y=849,color=0x262ea8},
 	MainPoint={x=71,y=592},
 }
 Data.宇宙棱镜={

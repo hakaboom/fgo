@@ -54,11 +54,10 @@ end
 point={
 }
 
-function point:new(Baseinfo)--table,{x=100,y=100,color=0xFFFFFF,Degree=95}
---local Baseinfo=TableCopy(Baseinfo)
-local Arry=Baseinfo.Arry or _Arry
-Baseinfo.Degree=Baseinfo.Degree or 95
-Baseinfo.index=Baseinfo.index or 1
+function point:new(Baseinfo)
+	local Arry=Baseinfo.Arry or _Arry
+	Baseinfo.Degree=Baseinfo.Degree or 95
+	Baseinfo.index=Baseinfo.index or 1
 	local o=Baseinfo
 	--table.foreach(Baseinfo,function (k,v) o[k]=v end)
 	if o.mode then	--如果从多点对象中创建过了则会直接返回
@@ -104,11 +103,10 @@ function point:getColor()--获取点的颜色R,G,B
 end
 
 function point:getColorEX()--二次插值取点
-_K:keepScreen(true)
-local point={x=self.x,y=self.y}
+	_K:keepScreen(true)
+	local point={x=self.x,y=self.y}
 	local ZoomX,ZoomY=math.floor(point.x),math.floor(point.y)	--缩放后的临近点
 	local u,v=(point.x-ZoomX),(point.y-ZoomY)
-	local Color0,Color1,Color2,Color3={},{},{},{}
 		local r0,g0,b0=getColorRGB(ZoomX,ZoomY)
 		local r1,g1,b1=getColorRGB(ZoomX+1,ZoomY)
 		local r2,g2,b2=getColorRGB(ZoomX,ZoomY+1)
@@ -124,9 +122,9 @@ local point={x=self.x,y=self.y}
 					b=(b2*(1-u)+b3*u),
 					}
 		local	DstColor={
-				r=tmpColor0.r*(1-v)+tmpColor1.r*v,
-				g=tmpColor0.g*(1-v)+tmpColor1.g*v,
-				b=tmpColor0.b*(1-v)+tmpColor1.b*v,
+					r=tmpColor0.r*(1-v)+tmpColor1.r*v,
+					g=tmpColor0.g*(1-v)+tmpColor1.g*v,
+					b=tmpColor0.b*(1-v)+tmpColor1.b*v,
 				}
 		self.DstColor=DstColor
 end
@@ -145,18 +143,30 @@ function point:getDiff()
 end
 
 function point:cmpColor()--比色
-	local floor=math.floor
-	local abs=math.abs
-	if not self.DstColor then self:getColorEX() end
-	local degree = floor(0xff * (100 - self.Degree) * 0.01)+0.5
+	local floor = math.floor
+	local r ,g ,b =floor(self.color/0x10000),floor(self.color%0x10000/0x100),floor(self.color%0x100)	
 	local lr,lg,lb=self.DstColor.r,self.DstColor.g,self.DstColor.b
-	local r,g,b=floor(self.color/0x10000),floor(self.color%0x10000/0x100),floor(self.color%0x100)
-	local r3,g3,b3=abs(lr-r),abs(lg-g),abs(lb-b)
-	local diff=math.sqrt(r3*r3+g3*g3+b3*b3)
-		if diff>degree then
-			return false
+	if self.DiffColor then
+		local offColor=self.DiffColor
+		local ofr,ofg,ofb=floor(offColor/0x10000),floor(offColor%0x10000/0x100),floor(offColor%0x100)
+		local ar,ag,ab=r-ofr,g-ofg,b-ofb	--max
+		local ir,ig,ib=r+ofr,g+ofg,b+ofb	--min
+		-- print(string.format('max=(%0.2f:%0.2f,%0.2f:%0.2f,%0.2f:%0.2f)',ar,lr,ag,lg,ab,lb))
+		-- print(string.format('min=(%0.2f:%0.2f,%0.2f:%0.2f,%0.2f:%0.2f)',ir,lr,ig,lg,ib,lb))
+		if ((ar<lr)and(ag<lg)and(ab<lb)) and  --max< color <min
+			((lr<ir)and(lg<ig)and(lb<ib)) then
+			return true
 		end
-	return true
+		return false
+	else
+		local fuzz =math.floor(0xff * (100 - self.Degree) * 0.01)
+		local r3,g3,b3=(lr-r),(lg-g),(lb-b)
+		local diff=math.sqrt(r3^2+g3^2+b3^2)
+			if diff>fuzz then
+				return false
+			end
+		return true
+	end
 end
 
 function point:getandCmpColor(touchmode,T)
@@ -186,15 +196,14 @@ multiPoint={
 }
 
 function multiPoint:new(Baseinfo)
---local Baseinfo=TableCopy(Baseinfo)
-local Arry=Baseinfo.Arry or _Arry
-local Anchor=Baseinfo.Anchor
-Baseinfo.Degree=Baseinfo.Degree or 95--全局模糊度
-Baseinfo.Area=Baseinfo.Area or nil--设置范围(findColor和OCR必须要传入Area)
-Baseinfo.hdir=Baseinfo.hdir or 0
-Baseinfo.vdir=Baseinfo.vdir or 0
-Baseinfo.priority=Baseinfo.priority or 0
-local o=Baseinfo
+	local Arry=Baseinfo.Arry or _Arry
+	local Anchor=Baseinfo.Anchor
+	Baseinfo.Degree=Baseinfo.Degree or 95--全局模糊度
+	Baseinfo.Area=Baseinfo.Area or nil--设置范围(findColor和OCR必须要传入Area)
+	Baseinfo.hdir=Baseinfo.hdir or 0
+	Baseinfo.vdir=Baseinfo.vdir or 0
+	Baseinfo.priority=Baseinfo.priority or 0
+	local o=Baseinfo
 	--table.foreach(Baseinfo,function(k,v) o[k]=v end)	--把Baseinfo写入o
 	------------------------------------------------------------------------------
 	local function getScaleArea(Area,DstMainPoint)	--缩放Area
@@ -241,9 +250,9 @@ local o=Baseinfo
 end
 
 function multiPoint:Click(T)
-math.randomseed(tonumber(string.reverse(tostring(mTime())):sub(1,6)))
-local p=self.index
-local point={math.random(p[1],p[3]),math.random(p[2],p[4])}
+	math.randomseed(tonumber(string.reverse(tostring(mTime())):sub(1,6)))
+	local p=self.index
+	local point={math.random(p[1],p[3]),math.random(p[2],p[4])}
 	touchDown(1,point[1],point[2])
 	slp()
 	touchUp(1,point[1],point[2])
@@ -257,7 +266,7 @@ function multiPoint:AllClick(T)
 end
 
 function multiPoint:getColor()--获取当前所有坐标的R,G,B值并且存放在self.color里
-_K:keepScreen(true)
+	_K:keepScreen(true)
 	for k,v in ipairs(self) do
 		self[k]:getColor()
 		self[k].DstColor=self[k].DstColor		--screen.getColor(data.x,data.y)
@@ -265,7 +274,7 @@ _K:keepScreen(true)
 end
 
 function multiPoint:getColorEX()--获取当前所有坐标的R,G,B值并且存放在self.color里
-_K:keepScreen(true)
+	_K:keepScreen(true)
 	for k,v in ipairs(self) do
 		self[k]:getColorEX()
 		self[k].DstColor=self[k].DstColor
@@ -273,26 +282,15 @@ _K:keepScreen(true)
 end
 
 function multiPoint:cmpColor()--比色
-local floor=math.floor
-local abs=math.abs
-  for k,v in ipairs(self) do
-	local degree = floor(0xff * (100 - v.Degree) * 0.01)+0.5
-	local lr,lg,lb=v.DstColor.r,v.DstColor.g,v.DstColor.b
-	local r,g,b=floor(v.color/0x10000),floor(v.color%0x10000/0x100),floor(v.color%0x100)
-	local r3,g3,b3=abs(lr-r),abs(lg-g),abs(lb-b)
-	local diff=math.sqrt(r3*r3+g3*g3+b3*b3)
-		if diff>degree then
---			print(string.format(">>>>>>>>>>>>>>>>>>>>>>>错误位置:%s",(self._tag or "")))
---			print(string.format("错误点[%s]:x=%s,y=%s",k,v.x,v.y))
---			print(string.format("缩放后:r=%.0f,g=%.0f,b=%.0f",lr,lg,lb))
---			print(string.format("缩放前:r=%s,g=%s,b=%s",r,g,b))
---			print(string.format("Diff=%s,Degree=%s",diff,degree))
---			print(">>>>>>>>>>>>>>>>找色结果:fasle")
-			return false,k
+	for k,v in ipairs(self) do
+		local  res=v:cmpColor()
+			if not res then
+				print(string.format(">>>>>>>>>>>>>>>>%s:false",(self._tag or "")))
+			return false,err
 		end
-  end
-	print(string.format(">>>>>>>>>>>>>>>>%s:true",(self._tag or "")))
-  return true
+  	end
+		print(string.format(">>>>>>>>>>>>>>>>%s:true",(self._tag or "")))
+  	return true
 end
 
 function multiPoint:getandCmpColor(touchmode,T)
@@ -307,8 +305,8 @@ function multiPoint:getandCmpColor(touchmode,T)
 end
 	
 function multiPoint:findColor()--区域找色
-local color={}
-local floor=math.floor
+	local color={}
+	local floor=math.floor
 	table.foreachi(self,function (k,v) 
 		color[k]={x=floor(v.x+0.5),y=floor(v.y+0.5),
 		color=v.color,degree=self.Degree,
