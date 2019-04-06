@@ -6,10 +6,8 @@ Data.满破={
 	Degree=80,
 }
 Data.好友={
-	{x=1722,y=474,color=0xe0ffa8},
-	{x=1713,y=495,color=0x82b93e},
+	{x=1722,y=492,color=0xdefda5},
 	MainPoint={x=71,y=292},
-	Degree=85,
 }
 Data.学妹午餐={
 	{x=92,y=696,color=0x79bb71},

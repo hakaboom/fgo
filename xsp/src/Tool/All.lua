@@ -199,3 +199,7 @@ function margeTable(t1,t2)
 		end
     end
 end
+
+function onBeforeUserExit()
+    dialog("脚本已停止",0)
+end

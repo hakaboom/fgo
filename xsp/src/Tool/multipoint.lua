@@ -285,7 +285,7 @@ function multiPoint:cmpColor()--比色
 	for k,v in ipairs(self) do
 		local  res=v:cmpColor()
 			if not res then
-				print(string.format(">>>>>>>>>>>>>>>>%s:false",(self._tag or "")))
+			--	print(string.format(">>>>>>>>>>>>>>>>%s:false",(self._tag or "")))
 			return false,err
 		end
   	end

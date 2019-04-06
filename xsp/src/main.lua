@@ -1,5 +1,5 @@
 require"Tool.All"
-_scriptver="2019.4.3 16.15"
+_scriptver="2019.4.4 20.24"
 DevScreen={	--开发
 	Top=0,Bottom=0,Left=0,Right=0,
 	Width=1920,Height=1080,
@@ -16,6 +16,7 @@ init("0",getScreenDirection())
 setUIOrientation(getScreenDirection())
 
 require("Behavior.init") --return MainConfig和FunctionConfig
+
 
 scene=require("Behavior.scene")
 behavior=require("Behavior.Behavior")

@@ -49,12 +49,11 @@ Data.AP回复=multiPoint:new({
 	_tag="AP回复",
 })
 Data.队伍确认=multiPoint:new({
-	{x=93,y=47,color=0xe1e2e2},
-	{x=226,y=50,color=0xdddddd},
-	{x=671,y=118,color=0x0d0e17},
-	{x=651,y=1015,color=0xe00a5c},
-	{x=1782,y=977,color=0xf6f6f6},
-	{x=254,y=1015,color=0x06edfd},
+	{x=100,y=60,color=0xd5d5d6},
+	{x=241,y=40,color=0xebebeb},
+	{x=257,y=1028,color=0x06f5fd},
+	{x=308,y=1019,color=0x00ccfd},
+	{x=1790,y=1051,color=0xe4e8ec},
 	_tag="队伍确认",
 })
 Data.战斗主页=multiPoint:new({
