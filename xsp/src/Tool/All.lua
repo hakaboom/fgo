@@ -20,19 +20,18 @@ function TableCopy(Tbl)						--表复制
 	return t
 end
 
-function slp(T,mode)	--传入秒
-T=T or 0.05
-T=T*1000
-mode=mode or "无"
-local switch={
+local slpMode = {
 	["极快"]=0.6,
 	["快"]=0.75,
 	["正常"]=1,
 	["一般"]=1.5,
-	["慢"]=2.2,
+	["慢"]=2,
 	["无"]=1,
 }
-	mSleep(T*switch[mode])
+function slp(T,mode)	--传入秒
+	T=T and T*1000 or 0.05
+	mode=mode or "无"
+	mSleep(T*slpMode[mode])
 end
 
 function belongvalue(aimTable,aim)					--判断目标变量在表中是否存在
@@ -94,9 +93,8 @@ function getCur(minwh,maxwh)	--获取用户机器分辨率参数
 	return Screen
 end
 
-function delay(Second)
-	slp(Second)
-	_addToDelay_()--前后无所谓
+function delay(Second,mode)
+	slp(Second,MainConfig["脚本运行速度"])
 end
 
 function Move(Movestart,Moveend,t)

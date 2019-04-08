@@ -1,5 +1,4 @@
-local Behavior={
-}
+local Behavior={}
 
 local tbl=require("Behavior.Data")
 计数器=HUD:new({point=tbl.HUD:getPoints(),color="0xfff9d854",bg="0x80222a15",size=40})
