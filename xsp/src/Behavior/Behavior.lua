@@ -197,7 +197,7 @@ function Behavior.选择优先敌人(index)
 	local 策略=MainConfig[index.."优先攻击敌人"]
 	if 策略=="默认" then return end
 	local tbl={左=point:new({x=80,y=61}),右=point:new({x=780,y=72}),中=point:new({x=430,y=69})}
-	tbl[策略]:Click()
+	tbl[策略]:Click(0.5)
 end
 
 function Behavior.释放技能(index,newRound)
@@ -205,14 +205,17 @@ function Behavior.释放技能(index,newRound)
 	local 换人策略 = {先发=MainConfig["换人礼装_先发"],替补=MainConfig["换人礼装_替补"]}
 	local 换人技能策略			= MainConfig["换人后释放技能"]
 	local 指向性技能策略			= MainConfig[index.."指向性技能"]
-	local 换人后指向性技能策略	= MainConfig["换人后指向性技能"]
-	local 识别敌方宝具策略		= MainConfig[index.."识别敌方宝具"]
+	local 换人后指向性技能策略	    = MainConfig["换人后指向性技能"]
+	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>防御
+	local 识别敌方宝具策略		    = MainConfig[index.."识别敌方宝具"]
 	local 防御技能策略			= MainConfig[index..'防御技能']
-	local 御主防御技能策略		= MainConfig[index..'御主防御技能']
+	local 御主防御技能策略		    = MainConfig[index..'御主防御技能']
 	local 防御指向性技能策略		= MainConfig[index..'防御指向性技能']
+	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	local 从者技能顺序			= MainConfig[index..'从者技能顺序']
 	
 	local 技能顺序,御主技能={},{}
+
 	if MainConfig.优先释放御主技能 and not 从者技能顺序 then
 		从者技能顺序 = 'ABC123456789'
 	end
@@ -412,19 +415,32 @@ end
 function Behavior.选卡(卡牌Data,index)
 	local function 设定卡牌权重(出卡顺序,出卡逻辑,是否克制)
 		local 权重={}
-		if 是否克制 then 克制=2 else 克制=1 end
-		if 出卡顺序=="红>蓝>绿" then 红色=2;蓝色=1.5;绿色=0.75
-		elseif 出卡顺序=="蓝>红>绿"	then 红色=1.5;蓝色=2;绿色=0.75
-		elseif 出卡顺序=="绿>红>蓝"	then 红色=1.5;蓝色=1.25;绿色=2
-		elseif 出卡顺序=="红>绿>蓝"	then 红色=2;蓝色=1.25;绿色=1.5
-		end     
-		if 出卡逻辑=="无要求" then 助战=1
-		elseif 出卡逻辑=="同颜色" then 助战=1;克制=1
-		elseif 出卡逻辑=="优先助战卡" then 助战=3
-		elseif 出卡逻辑=="不优先助战卡" then 助战=0.2
-		elseif 出卡逻辑=="不优先同角色" then 助战=1;克制=1
+		if 是否克制 then 
+			克制,被克制=1.75,0.5
+		else
+			克制,被克制 = 1,1
 		end
-		权重={颜色={红=红色,蓝=蓝色,绿=绿色},克制=克制,助战=助战}
+		if 出卡顺序=="红>蓝>绿" then 
+			红色,蓝色,绿色=1.5,1,0.8
+		elseif 出卡顺序=="蓝>红>绿"	then 
+			红色,蓝色,绿色=1,1.5,0.8
+		elseif 出卡顺序=="绿>红>蓝"	then 
+			红色,蓝色,绿色=1,0.8,1.5
+		elseif 出卡顺序=="红>绿>蓝"	then 
+			红色,蓝色,绿色=1.5,0.8,1
+		end     
+		if 出卡逻辑=="无要求" then 
+			助战=1
+		elseif 出卡逻辑=="同颜色" then 
+			助战,克制,被克制=1,1,1
+		elseif 出卡逻辑=="优先助战卡" then 
+			助战=3
+		elseif 出卡逻辑=="不优先助战卡" then 
+			助战=0.2
+		elseif 出卡逻辑=="不优先同角色" then 
+			助战=1
+		end
+		权重={颜色={红=红色,蓝=蓝色,绿=绿色},克制=克制,被克制=被克制,助战=助战}
 		return 权重
 	end
 	local 出卡顺序 = MainConfig[index.."出卡颜色顺序"]	--"红>蓝>绿,蓝>红>绿,绿>红>蓝,红>绿>蓝"
