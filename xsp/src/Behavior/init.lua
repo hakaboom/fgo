@@ -4,6 +4,14 @@ local Config=File:new("init.txt")
 local tbl=Config:ReadByJson()
 
 local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,2340*1080
+	['红米note7(不显示刘海)']={
+			Top=0,Bottom=0,Left=80+170,Right=170,
+			Width=2340,Height=1080,value=1,	
+	},
+	['红米note7(显示刘海)']={
+			Top=0,Bottom=0,Left=210,Right=210,
+			Width=2340,Height=1080,value=2,	
+	},
 	['2244*1080']={
 			Top=0,Bottom=0,Left=86+119,Right=119,
 			Width=2280,Height=1080,value=3,
@@ -20,13 +28,9 @@ local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,
 			Top=0,Bottom=0,Left=85+160,Right=160,
 			Width=2340,Height=1080,value=6,
 	},
-	['红米note7(不显示刘海)']={
-			Top=0,Bottom=0,Left=80+170,Right=170,
-			Width=2340,Height=1080,value=1,	
-	},
-	['红米note7(显示刘海)']={
-			Top=0,Bottom=0,Left=210,Right=210,
-			Width=2340,Height=1080,value=2,	
+	['荣耀10(2280*1080)']={
+			Top=0,Bottom=0,Left=173,Right=174,
+			Width=2190,Height=1080,value=7,			
 	},
 	['不选择']={
 		value=0,
@@ -35,7 +39,7 @@ local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,
 local 刘海选项=配置["刘海屏适配"]
 if 刘海选项~='不选择' then
 	local CurScreen=适配[刘海选项]
-	_K=System:new(DevScreen,CurScreen,1,"Height","Height")
+	_K=System:new(DevScreen,CurScreen,1,"Height","Width")
 	_Arry=_K:getArry()
 else
 	_Arry=_K:getArry()
