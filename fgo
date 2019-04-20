@@ -123,7 +123,9 @@ Data["魅影之夜(苏打糖)"]	/Users/huangziqing/Documents/xspworkspace/fgo/xs
 Data['三重结界']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	364;"	e
 Data['兰斯洛特(狂)']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战从者Data.lua	152;"	e
 Data['冠位人偶师']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	438;"	e
+Data['化为红莲的影之国']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	447;"	e
 Data['夏日未来视']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	405;"	e
+Data['巫女狐新娘修炼']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	472;"	e
 Data['引导迦勒底的少女']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	301;"	e
 Data['彭忒西勒亚(CEO)']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战从者Data.lua	143;"	e
 Data['循环']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	388;"	e
@@ -131,6 +133,7 @@ Data['斩首兔女郎']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Be
 Data['无慈悲者']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	293;"	e
 Data['柔软的慈爱']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	310;"	e
 Data['欢悦绵羊(冥界之砂)']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	242;"	e
+Data['正射必中']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	480;"	e
 Data['歪曲魔眼']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	413;"	e
 Data['死之艺术']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	276;"	e
 Data['毒蛇一艺']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	319;"	e
@@ -140,10 +143,12 @@ Data['甜蜜之日']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behav
 Data['短跑选手']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	421;"	e
 Data['第一次的情人节']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	355;"	e
 Data['繁星之夜(雪宝宝)']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	250;"	e
+Data['纯洁绽放']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	464;"	e
 Data['老成之翁']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	429;"	e
 Data['艳丽拳舞']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	372;"	e
 Data['迦勒底的学者']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	285;"	e
 Data['重复魔术']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	380;"	e
+Data['阿尔托莉雅之星']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	455;"	e
 Data['雪盗(虚幻蜡烛)']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	267;"	e
 Data['魔女厨房']	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	328;"	e
 DefaultAlign	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	125;"	e
@@ -269,7 +274,12 @@ MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战�
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	427;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	436;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	444;"	e
+MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	453;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	45;"	e
+MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	462;"	e
+MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	470;"	e
+MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	478;"	e
+MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	487;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	54;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	5;"	e
 MainPoint	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	62;"	e

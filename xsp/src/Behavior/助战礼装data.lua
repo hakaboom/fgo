@@ -443,4 +443,47 @@ Data['冠位人偶师']={
 	{x=295,y=525,color=0x13345e},
 	MainPoint={x=71,y=292},
 }
+-->>>>>>>>>>>>>>>>>>星战复刻
+Data['化为红莲的影之国']={ 
+	{x=161,y=532,color=0xfff0d9},
+	{x=278,y=496,color=0x2f2737},
+	{x=86,y=520,color=0x965871},
+	{x=306,y=497,color=0x393141},
+	{x=308,y=495,color=0x3b3344},
+	MainPoint={x=71,y=292},
+}
+Data['阿尔托莉雅之星']={
+	{x=94,y=536,color=0xa3310c},
+	{x=164,y=523,color=0x20284d},
+	{x=231,y=532,color=0xed473d},
+	{x=87,y=512,color=0x962a0c},
+	{x=244,y=527,color=0xfcebc9},
+	{x=207,y=496,color=0x2b121a},
+	MainPoint={x=71,y=292}
+}
+Data['纯洁绽放']={
+	{x=201,y=528,color=0xfff7dc},
+	{x=142,y=515,color=0xfff6d5},
+	{x=138,y=497,color=0xfff3cc},
+	{x=113,y=516,color=0xfffff5},
+	{x=89,y=511,color=0xf0f8f0},
+	MainPoint={x=71,y=292},
+}
+Data['巫女狐新娘修炼']={
+	{x=92,y=800,color=0xffffff},
+	{x=91,y=834,color=0xffffff},
+	{x=169,y=826,color=0xfffcf2},
+	{x=277,y=810,color=0xe6bb7b},
+	{x=272,y=850,color=0xe5ba7b},
+	MainPoint={x=71,y=592}
+}
+Data['正射必中']={
+	{x=193,y=823,color=0xbaa797},
+	{x=96,y=802,color=0x594441},
+	{x=84,y=830,color=0x2d2d2d},
+	{x=266,y=838,color=0x755249},
+	{x=121,y=794,color=0x2a1b1c},
+	{x=154,y=802,color=0x201010},
+	MainPoint={x=71,y=592},
+}
 return Data
