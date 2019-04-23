@@ -121,13 +121,12 @@ Data.获得战利品=multiPoint:new({
 	_tag="获得战利品",
 })
 Data.申请好友=multiPoint:new({
-	{x=107,y=60,color=0x5e7086},
-	{x=31,y=120,color=0x242a3e},
-	{x=1700,y=165,color=0x070c19},
-	{x=1729,y=38,color=0x0d1f59},
-	{x=1553,y=927,color=0xcccdcd},
-	{x=603,y=930,color=0xcdcdcd},
-	{x=938,y=1057,color=0x066686},
+	{x=336,y=917,color=0xd5d5d5},
+	{x=652,y=915,color=0xd7d8d8},
+	{x=1281,y=919,color=0xd5d5d5},
+	{x=1576,y=921,color=0xd5d5d5},
+	{x=236,y=144,color=0x112545},
+	{x=328,y=151,color=0x0b1f3e},
 	_tag="申请好友",
 })
 Data.换人礼装=multiPoint:new({
