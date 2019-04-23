@@ -1,5 +1,5 @@
 require"Tool.All"
-_scriptver="2019.4.17 09.58"
+_scriptver="2019.4.23 12.28"
 DevScreen={	--开发
 	Top=0,Bottom=0,Left=0,Right=0,
 	Width=1920,Height=1080,

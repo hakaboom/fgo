@@ -16,6 +16,7 @@ local 黑板=Blackboard:new()
 	["当前回合"]="不知道",
 	["是否为新回合"]=false,
 	["当前结算流程"]=" ",
+	['体力补充记录器']=false,
 })
 --Print(黑板:getAllValue())
 print(">>>>>>>>>>>>>>>>>>>黑板初始化完毕")
@@ -76,12 +77,12 @@ print("场景流程初始化完毕")
 	function(blackboard)
 		return blackboard:getValue("当前游戏场景")=="检测进入关卡"
 	end
-)
+	)
 重回主页:getStartTrigger():setRule(
 	function(blackboard)
 		return blackboard:getValue("当前游戏场景")=="重回主页"
 	end
-)
+	)
 AP不足:getStartTrigger():setRule(
 	function(blackboard)
 		return blackboard:getValue("当前游戏场景")=="AP不足"
@@ -189,21 +190,25 @@ print("触发器设定完毕")
 	_K:keepScreen(false)
 	delay(0.4)
 	end
-)
+	)
 AP不足:getDoingBehavior():setServer(
 	function(blackboard)
 		print("补充AP")
-		behavior.AP回复(blackboard:getValue("体力补充"))
+		if not blackboard:getValue('体力补充记录器') then  --在开始战斗处,改为false
+			behavior.AP回复(blackboard:getValue("体力补充"))
+			blackboard:setValue('体力补充记录器',true)
+		end
 		blackboard:setValue("当前游戏场景","初始化页面")
+		print('结束补充AP')
 	end
-)
+	)
 仓库爆仓:getDoingBehavior():setServer(
 	function(blackboard)
 		point:new({x=427,y=714}):Click(2)
 		behavior.贩卖(MainConfig["仓库爆仓"],blackboard:getValue("功能"))
 		blackboard:setValue("当前游戏场景","重回主页")
 	end
-)
+	)
 重回主页:getDoingBehavior():setServer(
 	function(blackboard)
 		delay(1)
@@ -214,13 +219,13 @@ AP不足:getDoingBehavior():setServer(
 			point:new({x=161,y=69}):Click()
 		end	
 	end
-)
+	)
 选择助战:getDoingBehavior():setServer(
 	function(blackboard)
 		behavior.选择助战()
 		blackboard:setValue("当前游戏场景","队伍确认")
 	end
-)
+	)
 队伍确认:getDoingBehavior():setServer(
 	function(blackboard)
 	_K:keepScreen(true)
@@ -259,6 +264,7 @@ AP不足:getDoingBehavior():setServer(
 	function(blackboard)
 		print("战斗开始")
 		blackboard:setValue("当前战斗流程","回合开始")
+		blackboard:setValue('体力补充记录器',false)
 	end
 	)
 识别当前关卡:getDoingBehavior():setServer(

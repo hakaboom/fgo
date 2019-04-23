@@ -55,7 +55,7 @@ ClearFile()	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/storage.l
 Click(T)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	252;"	f
 Click(T)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	89;"	f
 CmpTime()	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/runTime.lua	15;"	f
-ColorArea	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	301;"	e
+ColorArea	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	307;"	e
 ColorData	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	494;"	e
 ColorData	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	506;"	e
 ColorData	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	513;"	e
@@ -71,7 +71,7 @@ CurY	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/System.lua	28;"	
 CurY	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	188;"	e
 Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	451;"	e
 Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Data.lua	1;"	e
-Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	307;"	e
+Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	313;"	e
 Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战从者Data.lua	1;"	e
 Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/助战礼装data.lua	1;"	e
 Data	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	323;"	e
@@ -565,12 +565,12 @@ addSequence(Sequence)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Task
 addUrl(Parm)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	305;"	f
 addWeb(Parm)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	388;"	f
 addWebOnDefault(Parm)	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	432;"	f
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	158;"	e
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	181;"	e
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	227;"	e
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	243;"	e
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	318;"	e
-aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	338;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	159;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	182;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	232;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	248;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	324;"	e
+aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	344;"	e
 aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/自动抽友情.lua	140;"	e
 aim	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/自动抽友情.lua	98;"	e
 aimTable	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	143;"	e
@@ -844,7 +844,7 @@ indent	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	576;"	e
 index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	46;"	e
 index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Data.lua	10;"	e
 index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/init.lua	50;"	e
-index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	268;"	e
+index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	274;"	e
 index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/配置UI.lua	8;"	e
 insert	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	142;"	e
 integer_part	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	127;"	e
@@ -921,7 +921,7 @@ multiPoint:getandCmpColor	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/
 multiPoint:new	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	198;"	f
 multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/scene.lua	101;"	e
 multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/scene.lua	83;"	e
-multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	340;"	e
+multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	346;"	e
 multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/自动抽友情.lua	150;"	e
 multiPoint:new({index	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/自动抽无限池.lua	20;"	e
 multiPoint:printXY	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	349;"	f
@@ -973,7 +973,6 @@ offset	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua
 okname	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	135;"	e
 oldFile	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/init.lua	80;"	e
 oldName	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/init.lua	76;"	e
-onBeforeUserExit	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	201;"	f
 onDecodeError(message,	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	88;"	f
 onEncodeError(message,	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	111;"	f
 options	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	573;"	e
@@ -1124,7 +1123,7 @@ style	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/__UI/Z_ui.lua	200;"	
 subtable_indent	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/JSON.lua	621;"	e
 switch	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/multipoint.lua	6;"	e
 t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/Behavior.lua	267;"	e
-t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	267;"	e
+t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Behavior/刷图.lua	273;"	e
 t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	101;"	e
 t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	12;"	e
 t	/Users/huangziqing/Documents/xspworkspace/fgo/xsp/src/Tool/All.lua	131;"	e

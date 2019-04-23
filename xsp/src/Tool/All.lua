@@ -53,7 +53,7 @@ function belongindex(aimTable,aim)					--判断目标变量在表中是否存在
 end
 
 function show_UI(ui)
-local 脚本设置=require(ui)
+	local 脚本设置=require(ui)
 	if 脚本设置._cancel then
 		lua_exit()
 		return false
@@ -98,10 +98,10 @@ function delay(Second,mode)
 end
 
 function Move(Movestart,Moveend,t)
-t=t or 2
-local ceil=math.ceil
-local x1,y1=Movestart[1],Movestart[2]
-local x2,y2=Moveend[1],Moveend[2]
+	t=t or 2
+	local ceil=math.ceil
+	local x1,y1=Movestart[1],Movestart[2]
+	local x2,y2=Moveend[1],Moveend[2]
 	touchDown(2,x1,y1)
 	for i=0,100,t do
 		local x=x1+(x2-x1)*(i/100)
@@ -148,7 +148,7 @@ function getTableFromString(str,aim)            --从表中查找符合aim的条
 end
 
 function getTableRepeat(tbl)	--获取表中重复的数字
-local t={}
+	local t={}
 	for k,v in pairs(tbl) do
 		if t[v] then
 			t[v]=t[v]+1
@@ -160,7 +160,7 @@ local t={}
 end
 
 function urlencode(w)
-local pattern = "[^%w%d%?=&:/._%-%* ]"
+	local pattern = "[^%w%d%?=&:/._%-%* ]"
     s = string.gsub(w, pattern, function(c)
         local c = string.format("%%%02X", string.byte(c))
         return c
@@ -196,8 +196,4 @@ function margeTable(t1,t2)
 			t1[#t1+1] = v 
 		end
     end
-end
-
-function onBeforeUserExit()
-    dialog("脚本已停止",0)
 end
