@@ -1,5 +1,6 @@
 require"Tool.All"
-_scriptver="2019.4.23 12.28"
+_scriptver="2019.5.5 14.03"
+
 DevScreen={	--开发
 	Top=0,Bottom=0,Left=0,Right=0,
 	Width=1920,Height=1080,
@@ -8,7 +9,6 @@ DevScreen={	--开发
 _const={
 	GetColorMode='getColorEX'
 }
-
 _K=System:new(DevScreen,getCur(1000/560,1280/720),1,"Height","Height")
 if (_K.Cur.Height==1080 and _K.Cur.Width==1920) then _const.GetColorMode='getColor' end
 

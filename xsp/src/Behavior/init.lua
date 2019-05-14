@@ -18,7 +18,7 @@ local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,
 	},
 	['2248*1080']={
 			Top=0,Bottom=0,Left=90+118,Right=118,
-			Width=2280,Height=1080,value=4,
+			Width=2248,Height=1080,value=4,
 	},
 	["2280*1080"]={
 			Top=0,Bottom=0,Left=80+140,Right=140,
@@ -31,6 +31,10 @@ local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,
 	['荣耀10(2280*1080)']={
 			Top=0,Bottom=0,Left=173,Right=174,
 			Width=2190,Height=1080,value=7,			
+	},
+	['红米7']={
+			Top=0,Bottom=0,Left=54+93,Right=93,
+			Width=1520,Height=720,value=8,	
 	},
 	['不选择']={
 		value=0,

@@ -1,7 +1,7 @@
 local Behavior={}
 
 local tbl=require("Behavior.Data")
-计数器=HUD:new({point=tbl.HUD:getPoints(),color="0xfff9d854",bg="0x80222a15",size=40})
+计数器=HUD:new({point=tbl.HUD:getPoints(),color="0xfff9d854",bg="0x80222a15",size=35})
 
 function Behavior.AP回复(index)
 	local 金苹果,银苹果=point:new({x=1090,y=445,color=0xf1e9d8}),point:new({x=1090,y=660,color=0xf1e9d8})

@@ -147,8 +147,8 @@ Data.灵基变还=multiPoint:new({
 	_tag="灵基变还"
 })
 Data.HUD=multiPoint:new({
-	{x=200,y=0,color=0xdddddd},
-	{x=550,y=60,color=0xd8d8d8},
+	{x=300,y=0,color=0xdddddd},
+	{x=650,y=50,color=0xd8d8d8},
 })
 Data.道具使用=multiPoint:new({
 	{x=277,y=97,color=0x06bbf5},

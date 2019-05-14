@@ -167,11 +167,11 @@ print("触发器设定完毕")
 		elseif aim=="已进入战斗" then
 			blackboard:setValue("当前游戏场景","已进入战斗")
 		elseif aim=="AP不足" then
-			print("AP不足")
 			blackboard:setValue("当前游戏场景","AP不足")
 		elseif aim=="仓库爆仓" then
 			blackboard:setValue("当前游戏场景","仓库爆仓")
 		end
+	计数器:show(blackboard:getValue('当前游戏场景'))
 	_K:keepScreen(false)
 	delay(0.4)
 	end
@@ -187,6 +187,7 @@ print("触发器设定完毕")
 		elseif aim=="仓库爆仓" then
 			blackboard:setValue("当前游戏场景","仓库爆仓")
 		end
+	计数器:show(blackboard:getValue('当前游戏场景'))
 	_K:keepScreen(false)
 	delay(0.4)
 	end
@@ -224,6 +225,7 @@ AP不足:getDoingBehavior():setServer(
 	function(blackboard)
 		behavior.选择助战()
 		blackboard:setValue("当前游戏场景","队伍确认")
+		计数器:hide()
 	end
 	)
 队伍确认:getDoingBehavior():setServer(
