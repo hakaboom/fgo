@@ -486,4 +486,55 @@ Data['正射必中']={
 	{x=154,y=802,color=0x201010},
 	MainPoint={x=71,y=592},
 }
+-->>>>>>>>>>>>>>>>>>星之三藏复刻 
+Data['三色兼备']={
+	{x=84,y=501,color=0x9eeaa6},
+	{x=98,y=517,color=0xeff2ee},
+	{x=305,y=493,color=0xbbec92},
+	{x=252,y=510,color=0xeff193},
+	{x=292,y=528,color=0xedf2ed},
+	MainPoint={x=71,y=292},
+}
+Data['九首牛魔罗王']={
+	{x=198,y=527,color=0xfffff0},
+	{x=204,y=537,color=0xe4cbc3},
+	{x=284,y=497,color=0xc7e8eb},
+	{x=308,y=500,color=0xd4edef},
+	{x=125,y=501,color=0x3f5c71},
+	MainPoint={x=71,y=292},
+}
+Data['风云仙姬']={
+	{x=215,y=532,color=0xfff9e9},
+	{x=221,y=525,color=0xfff9e9},
+	{x=298,y=503,color=0xc8f2ff},
+	{x=283,y=510,color=0x97dff6},
+	{x=124,y=495,color=0x3ea9e0},
+	{x=115,y=502,color=0x48b8e4},
+	MainPoint={x=71,y=292},
+}
+Data['三昧真火']={
+	{x=176,y=820,color=0xfffbdc},
+	{x=189,y=831,color=0xfff7d9},
+	{x=126,y=801,color=0x9c8b8b},
+	{x=285,y=819,color=0x884140},
+	{x=301,y=810,color=0x8c4047},
+	MainPoint={x=71,y=592},
+}
+Data['GoWest']={
+	{x=86,y=665,color=0xfff0d7},
+	{x=99,y=653,color=0xffeeee},
+	{x=126,y=683,color=0xfde5cc},
+	{x=147,y=693,color=0xffe5ce},
+	{x=146,y=710,color=0xe7848a},
+	{x=208,y=688,color=0xffedea},
+	MainPoint={x=71,y=452},
+}
+Data['英雄风采三色杰']={
+	{x=201,y=821,color=0xfff7de},
+	{x=218,y=829,color=0xf5b8a4},
+	{x=131,y=793,color=0xfdfdfd},
+	{x=96,y=845,color=0xc1332f},
+	{x=105,y=853,color=0xcc2227},
+	MainPoint={x=71,y=592},
+}
 return Data
