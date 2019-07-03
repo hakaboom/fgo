@@ -185,7 +185,7 @@ function point:getXY()--获取XY坐标
 end
 
 function point:printXY()--打印坐标
-	print(string.format("{x=%s,y=%s}",self.x,self.y))
+	print(string.format("{x=%0.2f,y=%0.2f}",self.x,self.y))
 end
 
 function point:printSelf()--打印自身
@@ -222,28 +222,28 @@ function multiPoint:new(Baseinfo)
 	if Baseinfo.DstMainPoint then	
 		table.foreachi(o,function(k,v) 
 			v.x,v.y=getScaleXY(v,o.MainPoint,Baseinfo.DstMainPoint,Arry);v.mode=true;
-			v.Degree=Baseinfo.Degree;
+			v.Degree=v.Degree or Baseinfo.Degree;
 			o[k]=point:new(v)	--缩放
 		end)
 	elseif not Anchor then --如果没有设置锚点
 		table.foreachi(o,function(k,v) 
 			v.x=(v.x-Arry.Dev.Left)*Arry.AppurtenantScaleMode+Arry.Cur.Left	--分别计算出缩放后的X,Y
 			v.y=(v.y-Arry.Dev.Top)*Arry.AppurtenantScaleMode+Arry.Cur.Top
-			v.mode=true;v.Degree=Baseinfo.Degree;
+			v.mode=true;v.Degree=v.Degree or Baseinfo.Degree;
 			o[k]=point:new(v)
 		end)
 	else	
 		o.DstMainPoint=getScaleMainPoint(o.MainPoint,Anchor,Arry)	--计算锚点
 		table.foreachi(o,function(k,v) 
 			v.x,v.y=getScaleXY(v,o.MainPoint,o.DstMainPoint,Arry);v.mode=true;
-			v.Degree=Baseinfo.Degree;
+			v.Degree=v.Degree or Baseinfo.Degree;
 			o[k]=point:new(v)--缩放
 		end)
 	end
 	
-	if o.index then o.index=getScaleArea(o.index,o.DstMainPoint,Arry) end--如果有设置点击点
+	if o.index then o.index=getScaleArea(TableCopy(o.index),o.DstMainPoint,Arry) end--如果有设置点击点
 	
-	if o.Area then o.Area=getScaleArea(o.Area,o.DstMainPoint,o.MainPoint,Arry) end	--缩放范围
+	if o.Area then o.Area=getScaleArea(TableCopy(o.Area),o.DstMainPoint,o.MainPoint,Arry) end	--缩放范围
 	
 	setmetatable(o,{__index = self} )
 	return o

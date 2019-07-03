@@ -7,8 +7,8 @@ local 黑板=Blackboard:new()
 	["启动时间"]=mTime(),
 	["当前时间"]=os.time(),
 	["已刷次数"]=0,
-	["当前游戏场景"]="初始化页面",
-	["当前战斗流程"]="等待进入战斗",
+	["当前游戏场景"]='初始化页面',
+	["当前战斗流程"]='等待进入战斗',
 	["功能"]=MainConfig.功能选择,
 	["体力补充"]=MainConfig.体力补充,
 	["刷图次数"]=tonumber(FunctionConfig.刷图次数),
@@ -283,6 +283,7 @@ AP不足:getDoingBehavior():setServer(
 			else
 				blackboard:setValue("是否为新回合",true)
 			end
+		Print(blackboard:getValue("是否为新回合"))
 		blackboard:setValue("当前关卡",当前关卡)
 		blackboard:setValue("当前战斗流程","识别关卡结束")
 		if not MainConfig.隐藏计数器 then
@@ -353,6 +354,8 @@ AP不足:getDoingBehavior():setServer(
 			print('获取新卡')
 			point:new({x=55,y=63}):Click()
 		elseif aim==true then
+			blackboard:setValue("当前关卡",0)
+			blackboard:setValue("是否为新回合",true)
 			blackboard:setValue("当前游戏场景","初始化页面")
 		end
 	_K:keepScreen(false)

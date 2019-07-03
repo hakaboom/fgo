@@ -116,8 +116,8 @@ Data.羁绊结算=multiPoint:new({
 Data.获得战利品=multiPoint:new({
 	{x=1518,y=1019,color=0xd3d3d3},
 	{x=1820,y=1021,color=0xd5d5d5},
-	{x=186,y=136,color=0xeaba24},
-	{x=211,y=136,color=0xeaba24},
+	{x=186,y=136,color=0xeaba24,Degree=90},
+	{x=211,y=136,color=0xeaba24,Degree=90},
 	_tag="获得战利品",
 })
 Data.申请好友=multiPoint:new({
@@ -143,7 +143,7 @@ Data.灵基变还=multiPoint:new({
 	{x=228,y=54,color=0xdadada},
 	{x=76,y=561,color=0x10c0f1},
 	{x=43,y=716,color=0xd0e1f1},
-	{x=1598,y=186,color=0x0056a0},
+	{x=1703,y=167,color=0x0174c7},
 	_tag="灵基变还"
 })
 Data.HUD=multiPoint:new({
@@ -175,6 +175,14 @@ Data.助战下拉条=multiPoint:new({
 	{x=1878,y=1039,color=0xe2c05a},
 	{x=1841,y=1032,color=0xd19e6b},
 	{x=1860,y=1031,color=0xf7f7f7},
+})
+Data.无法使用技能=multiPoint:new({
+	{x=831,y=818,color=0xf1f1f1},
+	{x=831,y=865,color=0xdadbdc},
+	{x=1087,y=819,color=0xf0f0f0},
+	{x=1096,y=865,color=0xdfdfe0},
+	{x=932,y=843,color=0x000000},
+	_tag="无法使用技能",
 })
 -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Data.友情池=multiPoint:new({

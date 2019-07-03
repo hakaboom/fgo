@@ -1,5 +1,6 @@
 local 配置=show_UI("__UI.配置UI")
 if not 配置 then  print("退出脚本") lua_exit() end
+Print(配置)
 local Config=File:new("init.txt")
 local tbl=Config:ReadByJson()
 
@@ -72,7 +73,7 @@ if 配置["是否删除配置"] then
 	end
 	Config:WriteNewByJson(tbl)
 	dialog('删除配置,请重启')
-	lua_exit()
+	lua_restart()
 end
 
 if 配置["更改配置名称"] then

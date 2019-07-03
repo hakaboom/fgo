@@ -140,6 +140,14 @@ Data.水尼禄={
 	{x=242,y=346,color=0xd8bf7d},
 	MainPoint={x=71,y=288},
 }
+Data.黑贞={
+	{x=205,y=697,color=0xfff9e9},
+	{x=152,y=678,color=0x361e57},
+	{x=86,y=662,color=0xaa70cb},
+	{x=84,y=714,color=0x4a02be},
+	{x=259,y=678,color=0xfcf4ec},
+	MainPoint={x=71,y=592},
+}
 Data['彭忒西勒亚(CEO)']={
 	{x=174,y=354,color=0xfdeddc},
 	{x=209,y=407,color=0xfdf5ed},
@@ -183,5 +191,52 @@ Data["海伦娜(Caster)"]={
 	{x=177,y=660,color=0x201728},
 	MainPoint={x=71,y=472},
 }
+Data.冲田总司={
+	{x=180,y=421,color=0xfff1e0},
+	{x=226,y=421,color=0xfff1d8},
+	{x=214,y=357,color=0xfdf5e5},
+	{x=93,y=371,color=0x1a1a1a},
+	{x=93,y=444,color=0x292929},
+	{x=164,y=470,color=0x3b3b3b},
+	MainPoint={x=71,y=292},
+}
+Data.大英雄={
+	{x=203,y=707,color=0xf9d896},
+	{x=192,y=688,color=0xd19f7e},
+	{x=86,y=738,color=0xd4a348},
+	{x=158,y=774,color=0xbf543b},
+	{x=235,y=774,color=0x783626},
+	{x=295,y=718,color=0x87f0c1},
+	MainPoint={x=71,y=592},
+}
+Data.水枪呆={
+	{x=202,y=396,color=0xfdfddc},
+	{x=146,y=380,color=0xfffff9},
+	{x=301,y=351,color=0x0ba0fa},
+	{x=108,y=458,color=0xffffaf},
+	{x=100,y=390,color=0xffffb6},
+	{x=128,y=424,color=0xffffaf},
+	MainPoint={x=71,y=283},
+}
+Data.枪凛={
+	{x=167,y=707,color=0xfff1d8},
+	{x=230,y=714,color=0xffffff},
+	{x=276,y=705,color=0xc2804b},
+	{x=301,y=690,color=0xfceccb},
+	{x=98,y=685,color=0xfff1c8},
+	{x=104,y=752,color=0xaf7544},
+	MainPoint={x=71,y=592},
+}
+Data.葛饰北斋={
+	{x=184,y=692,color=0xfdedf5},
+	{x=207,y=723,color=0xfdedf5},
+	{x=102,y=741,color=0x3db0ea},
+	{x=153,y=774,color=0x37abe5},
+	{x=295,y=649,color=0x2f1f37},
+	{x=173,y=606,color=0x6d5475},
+	{x=296,y=684,color=0x332344},
+	MainPoint={x=71,y=592},
+}
+
 
 return Data

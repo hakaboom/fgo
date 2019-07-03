@@ -693,6 +693,7 @@ local json=require("JSON")
 	end
 	ReturnType=ReturnType or 3
 	local ret,results=showUI(json:encode(self.con))
+	Print(results)
 	local res={_cancel=false}
 	local _a=0
 	if ret==1 then

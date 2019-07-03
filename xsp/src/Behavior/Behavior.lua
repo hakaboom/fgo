@@ -205,7 +205,7 @@ function Behavior.释放技能(index,newRound)
 	local 换人策略 = {先发=MainConfig["换人礼装_先发"],替补=MainConfig["换人礼装_替补"]}
 	local 换人技能策略			= MainConfig["换人后释放技能"]
 	local 指向性技能策略			= MainConfig[index.."指向性技能"]
-	local 换人后指向性技能策略	    = MainConfig["换人后指向性技能"]
+	local 换人后指向性技能策略       = MainConfig["换人后指向性技能"]
 	-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>防御
 	local 识别敌方宝具策略		    = MainConfig[index.."识别敌方宝具"]
 	local 防御技能策略			= MainConfig[index..'防御技能']
@@ -272,7 +272,7 @@ function Behavior.释放技能(index,newRound)
 			tbl.战斗主页:WaitScreen("战斗主页")
 			if not 换人技能策略 then return end
 			for k,_ in pairs(换人技能策略) do
-				multiPoint:new({index=TableCopy(技能位置[t[k]])}):Click(1)
+				multiPoint:new({index=技能位置[t[k]]}):Click(1)
 				放技能(换人后指向性技能策略)
 			end
 	end
@@ -293,6 +293,8 @@ function Behavior.释放技能(index,newRound)
 						else
 							决定:Click()
 						end
+				elseif tbl.无法使用技能:getandCmpColor() then
+					point:new({x=952,y=841}):Click(0.5)
 				elseif tbl.换人礼装:getandCmpColor() then print("换人")
 					point:new(换人位置.先发[换人策略.先发]):Click(0.5)
 					point:new(换人位置.替补[换人策略.替补]):Click(0.5)
@@ -310,7 +312,7 @@ function Behavior.释放技能(index,newRound)
 		local 敌人位置={'左','中','右'}
 		for k,v in pairs(策略) do
 			local multi=multiPoint:new({
-				Area=TableCopy(敌人充能槽[敌人位置[k]]),
+				Area=敌人充能槽[敌人位置[k]],
 				{x=257,y=119,color=0xff5c60},
 				{x=281,y=119,color=0xff5c62},
 				_tag='敌人充能槽'
@@ -326,12 +328,12 @@ function Behavior.释放技能(index,newRound)
 			end)
 				if multi:findColor() then
 					for k,_ in pairs(防御技能策略) do
-						multiPoint:new({index=TableCopy(技能位置[k])}):Click(1)
+						multiPoint:new({index=技能位置[k]}):Click(1)
 						放技能(防御指向性技能策略)
 					end
 					for k,v in pairs(御主技能策略) do
 						point:new({x=1795,y=477}):Click(0.6)
-						multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+						multiPoint:new({index=技能位置[v]}):Click(1)
 						放技能(防御指向性技能策略)
 					end
 					return
@@ -359,7 +361,7 @@ function Behavior.释放技能(index,newRound)
 				if diff.r>90 or diff.g>90 then
 					print(v.."cd中")
 				else
-					multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+					multiPoint:new({index=技能位置[v]}):Click(1)
 					放技能()	
 				end
 			end
@@ -370,7 +372,7 @@ function Behavior.释放技能(index,newRound)
 		print('释放技能')
 		for _,v in pairs(技能顺序) do
 			if v>=10 then point:new({x=1795,y=477}):Click(0.6) end
-			multiPoint:new({index=TableCopy(技能位置[v])}):Click(1)
+			multiPoint:new({index=技能位置[v]}):Click(1)
 			放技能()	
 		end
 	end
@@ -496,7 +498,7 @@ function Behavior.取得卡牌信息(AreaTbl,index)
 			蓝={{x=0,y=0,color=0x82f5fd},{x=-67,y=6,color=0xfdf5ab},{x=-50,y=44,color=0xab7940}},
 			绿={{x=0,y=0,color=0x51f535},{x=-6,y=-21,color=0xb6854b},{x=-7,y=-30,color=0xe8c682}}}
 		for k,v in pairs(ColorData) do
-			local data={};data.Area=TableCopy(Area);data.Degree=90
+			local data={};data.Area=Area;data.Degree=90
 			table.foreach(v,function (k,v) data[k]=v end)
 			local data=multiPoint:new(data):findColor()
 			if data then return k end 
@@ -504,14 +506,14 @@ function Behavior.取得卡牌信息(AreaTbl,index)
 	end
 	local function 取得助战关系(Area)
 		local ColorData={{x=0,y=0,color=0xbf5353},{x=-7,y=0,color=0x8c3737},{x=-14,y=-1,color=0xf2f2f4}}
-		local data={};data.Area=TableCopy(Area);data.Degree=90
+		local data={};data.Area=Area;data.Degree=90
 		table.foreach(ColorData,function (k,v) data[k]=v end)
 		local data=multiPoint:new(data):findColor()
 		if data then return true else return false end
 	end
 	local function 取得克制关系(Area)
 		local ColorData={{x=0,y=0,color=0xf65322},{x=1,y=8,color=0xd30000},{x=0,y=18,color=0x720101},{x=-20,y=29,color=0xffed8e}}	
-		local data={};data.Area=TableCopy(Area);data.Degree=90
+		local data={};data.Area=Area;data.Degree=90
 		table.foreach(ColorData,function (k,v) data[k]=v end)
 		local data=multiPoint:new(data):findColor()
 			if data then return true else return false end

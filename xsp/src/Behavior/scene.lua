@@ -83,6 +83,7 @@ function Scene.等待回合结束()
 	multiPoint:new({index={1190,74,1400,160}}):Click(0.5) 
 end
 
+local _获得战利品=multiPoint:new({index={3,175,53,272}})
 function Scene.获得战利品()
 	if tbl.获得战利品:getandCmpColor() then
 		return "获得战利品"
@@ -98,7 +99,7 @@ function Scene.获得战利品()
 		tbl.主页面:Click()
 		return true
 	end
-	multiPoint:new({index={3,175,53,272}}):Click(0.5) 
+	_获得战利品:Click(0.5) 
 end
 
 function Scene.等待友情池()

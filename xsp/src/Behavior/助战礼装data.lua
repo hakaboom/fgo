@@ -488,11 +488,11 @@ Data['正射必中']={
 }
 -->>>>>>>>>>>>>>>>>>星之三藏复刻 
 Data['三色兼备']={
-	{x=84,y=501,color=0x9eeaa6},
-	{x=98,y=517,color=0xeff2ee},
-	{x=305,y=493,color=0xbbec92},
-	{x=252,y=510,color=0xeff193},
-	{x=292,y=528,color=0xedf2ed},
+	{x=199,y=536,color=0xffe3c4},
+	{x=249,y=514,color=0xeff196},
+	{x=98,y=520,color=0xf0f5ee},
+	{x=83,y=500,color=0x9eeba6},
+	{x=282,y=495,color=0x7f7f8f},
 	MainPoint={x=71,y=292},
 }
 Data['九首牛魔罗王']={
@@ -537,4 +537,89 @@ Data['英雄风采三色杰']={
 	{x=105,y=853,color=0xcc2227},
 	MainPoint={x=71,y=592},
 }
+-->>>>>>>>>>>>>>>>>>Apocrypha/lnheritance of Glory
+Data['城塞的午后']={
+	{x=83,y=519,color=0xd2e9f9},
+	{x=169,y=513,color=0xb0a4bd},
+	{x=222,y=534,color=0xf5eddc},
+	{x=170,y=528,color=0x968696},
+	{x=304,y=496,color=0xa1a1c2},
+	MainPoint={x=71,y=292},
+}
+Data['出发前进']={
+	{x=123,y=844,color=0x16c4ed},
+	{x=203,y=828,color=0xffd7df},
+	{x=297,y=810,color=0x1af1e0},
+	{x=86,y=815,color=0xebf7fe},
+	{x=127,y=796,color=0x0ec4fd},
+	MainPoint={x=71,y=592},
+}
+Data['身在图利法斯']={
+	{x=160,y=498,color=0x574f57},
+	{x=224,y=510,color=0xefb57b},
+	{x=229,y=539,color=0xedc4a3},
+	{x=301,y=495,color=0xffffe9},
+	{x=97,y=540,color=0x171717},
+	MainPoint={x=71,y=292},
+}
+Data['去往远方的巡礼']={
+	{x=185,y=833,color=0xeac17f},
+	{x=194,y=799,color=0xf6f6f6},
+	{x=143,y=812,color=0xc69c52},
+	{x=87,y=796,color=0xceefe7},
+	{x=303,y=799,color=0xfcfce3},
+	{x=88,y=827,color=0xdbf4ec},
+	MainPoint={x=71,y=592},
+}
+Data['刹那的幸福之地']={
+	{x=194,y=522,color=0xc9a087},
+	{x=224,y=499,color=0xbf967d},
+	{x=130,y=508,color=0x251414},
+	{x=93,y=515,color=0xe9c88e},
+	{x=102,y=547,color=0xfcf4db},
+	MainPoint={x=71,y=292},
+}
+-->>>>>>>>>>>>>>>>>>明治维新 
+Data['壬生狼']={
+	{x=128,y=527,color=0xd8af75},
+	{x=85,y=495,color=0xc6dfef},
+	{x=189,y=508,color=0x16161f},
+	{x=305,y=549,color=0x1c6e66},
+	{x=195,y=535,color=0x2bc8d8},
+	MainPoint={x=71,y=292},
+}
+Data['春风游步道']={
+	{x=163,y=820,color=0xfff0e8},
+	{x=183,y=825,color=0xfff1e9},
+	{x=120,y=824,color=0xdce5d4},
+	{x=304,y=811,color=0xc7e8f0},
+	{x=266,y=822,color=0xb7a7d8},
+	MainPoint={x=71,y=592},
+}
+Data['日轮之城']={
+	{x=189,y=509,color=0xf5d4bb},
+	{x=301,y=496,color=0xc6f7fe},
+	{x=131,y=494,color=0xf77e9c},
+	{x=181,y=527,color=0xf1d0b7},
+	{x=306,y=551,color=0x39598a},
+	MainPoint={x=71,y=292},
+}
+Data['社交界之花']={
+	{x=220,y=502,color=0xaf7d6d},
+	{x=179,y=514,color=0x6e3d5e},
+	{x=238,y=494,color=0x442b3b},
+	{x=277,y=495,color=0x4b4343},
+	{x=132,y=512,color=0x282828},
+	MainPoint={x=71,y=292},
+}
+Data['第六天魔王']={
+	{x=119,y=508,color=0xf18654},
+	{x=86,y=512,color=0x7d0a0a},
+	{x=171,y=509,color=0xa21d1d},
+	{x=222,y=526,color=0xa61e15},
+	{x=247,y=505,color=0xf6c5cd},
+	MainPoint={x=71,y=292},
+}
+
+
 return Data

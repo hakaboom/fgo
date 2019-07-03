@@ -5,13 +5,13 @@ local DevScreen={
 }
 local 助战名单="无要求,列表第一个,列表第二个,列表第三个,梅林,诸葛孔明,玉藻前,拉二,德雷克,海伦娜(Caster),小莫(Rider),小莫(saber),花嫁尼禄,"
 local 助战名单=助战名单.."闪闪,黑狗,源赖光,宫本武藏,刑部姬,天草四郎,弓凛,兰斯洛特(狂),彭忒西勒亚(CEO),葛饰北斋,"
-local 助战名单=助战名单..'阿比盖尔,水尼禄'
+local 助战名单=助战名单..'阿比盖尔,水尼禄,黑贞,冲田总司,大英雄,水枪呆,枪凛,葛饰北斋'
 local 礼装名单="无要求,学妹午餐,2030年的碎片,蒙娜丽莎,宇宙棱镜,万华镜,虚数魔术,"
-local 礼装名单=礼装名单..'三色兼备,九首牛魔罗王,风云仙姬,三昧真火,GoWest,英雄风采三色杰'
+local 礼装名单=礼装名单..'壬生狼,春风游步道,日轮之城,社交界之花,第六天魔王'
 
 local 主UI=ZUI:new(DevScreen,{align="left",w=95,h=90,size=90,cancelname="取消",okname="OK",countdown=0,config=UI配置文件..".dat",xpos=2})
 local 主功能选择=Page:new(主UI,{text="主功能选择",size=20})
-主功能选择:addLabel({text="[星之三藏复刻]",size=60,align="center",w=90,color="255,0,0"})
+主功能选择:addLabel({text="[明治维新复刻]",size=60,align="center",w=90,color="255,0,0"})
 主功能选择:nextLine()
 主功能选择:addLabel({text="功能选择:",size=40,color="57,85,164"})
 主功能选择:addLabel({text="--运行前请去叉叉设置里选择运行时隐藏悬浮窗,选择了自动卖狗粮要先调整成一排7个的模式",size=25,color="255,0,0",ypos=2})
