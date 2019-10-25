@@ -62,7 +62,7 @@ function Behavior.选择助战()
 		return false
 	end
 	local function 列表更新()
-	print("列表更新")
+		print("列表更新")
 		local 按钮=point:new({x=1249,y=193})
 		local 是=point:new({x=1247,y=847})
 		local 关闭=point:new({x=953,y=841})
@@ -124,7 +124,7 @@ function Behavior.选择助战()
 					end
 					Move(下滑[1],下滑[2],4)
 				_K:keepScreen(false)
-				if 识别下拉框() then print("下拉条到底") break end --tbl.助战下拉条:findColor()
+				if 识别下拉框() then print("下拉条到底") break end
 			end	
 			if 列表更新次数>已更新列表次数 then 列表更新() 已更新列表次数=已更新列表次数+1 等待助战页面() else break end --列表更新
 		end

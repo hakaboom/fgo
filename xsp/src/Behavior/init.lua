@@ -37,6 +37,10 @@ local 适配={ --不选择,红米note7(2340*1080),2244*1080,2248*1080,2280*1080,
 			Top=0,Bottom=0,Left=54+93,Right=93,
 			Width=1520,Height=720,value=8,	
 	},
+	['oppo R17']={
+			Top=0,Bottom=0,Left=73+173,Right=174,
+			Width=2340,Height=1080,value=9,	
+	},
 	['不选择']={
 		value=0,
 	},

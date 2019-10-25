@@ -237,6 +237,14 @@ Data.葛饰北斋={
 	{x=296,y=684,color=0x332344},
 	MainPoint={x=71,y=592},
 }
-
+Data.斯卡蒂={
+	{x=88,y=387,color=0xdbcbf4},
+	{x=200,y=414,color=0xffffe0},
+	{x=103,y=445,color=0xd89ef9},
+	{x=164,y=465,color=0xdba0fc},
+	{x=286,y=394,color=0x27276a},
+	{x=305,y=375,color=0x9e7cfd},
+	MainPoint={x=71,y=292},
+}
 
 return Data

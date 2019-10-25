@@ -620,6 +620,176 @@ Data['第六天魔王']={
 	{x=247,y=505,color=0xf6c5cd},
 	MainPoint={x=71,y=292},
 }
+-->>>>>>>>>>>>>>>>>>泳装2019			
+Data['狐狸女士']={
+	{x=106,y=544,color=0xffffff},
+	{x=101,y=497,color=0x1f58e5},
+	{x=120,y=516,color=0x1c87fa},
+	{x=289,y=507,color=0x271658},
+	{x=251,y=493,color=0x1f58e5},
+	{x=306,y=521,color=0x1f2467},
+	MainPoint={x=71,y=287},
+}
+Data['翠绿上的摇曳']={
+	{x=128,y=814,color=0xcc9a9a},
+	{x=109,y=841,color=0xf8e8cf},
+	{x=187,y=816,color=0x1671c4},
+	{x=252,y=818,color=0xf9f9f9},
+	{x=278,y=818,color=0xf6757e},
+	{x=275,y=793,color=0xf8f8f8},
+	MainPoint={x=71,y=587},	
+}
+Data['疾风怒涛']={
+	{x=204,y=533,color=0xffe9d8},
+	{x=281,y=540,color=0xfdf4e5},
+	{x=294,y=501,color=0xfcfcfc},
+	{x=198,y=491,color=0xfdede5},
+	{x=107,y=521,color=0x1a2396},
+	MainPoint={x=71,y=290},	
+}
+Data['沙滩上的英雄']={
+	{x=195,y=837,color=0xdcab71},
+	{x=243,y=815,color=0xe6c47a},
+	{x=131,y=839,color=0xfff99e},
+	{x=94,y=822,color=0xf1c88e},
+	{x=167,y=801,color=0xb07f1c},
+	MainPoint={x=71,y=590},	
+}
+Data['Little little bullet']={
+	{x=181,y=672,color=0xfcdbcb},
+	{x=122,y=706,color=0xfce3db},
+	{x=103,y=686,color=0xd8c8b7},
+	{x=86,y=658,color=0xffffff},
+	{x=298,y=674,color=0x9c7362},
+	{x=182,y=669,color=0xfcdbcb},
+	MainPoint={x=71,y=452},	
+}
+Data['彻夜狂欢']={
+	{x=278,y=985,color=0x964c75},
+	{x=254,y=957,color=0x964c75},
+	{x=205,y=969,color=0x261756},
+	{x=187,y=979,color=0x261755},
+	{x=126,y=966,color=0x5c788b},
+	{x=258,y=994,color=0x964c75},
+	MainPoint={x=71,y=752},	
+}
+Data['水光潋滟']={
+	{x=171,y=523,color=0xffd6ce},
+	{x=107,y=510,color=0xcebf7d},
+	{x=229,y=507,color=0x588292},
+	{x=290,y=512,color=0xc8f9f9},
+	{x=244,y=518,color=0x5f575f},
+	MainPoint={x=71,y=300},	
+}
+Data['晚霞中的即兴表演']={
+	{x=206,y=795,color=0xb73b6d},
+	{x=140,y=795,color=0x995757},
+	{x=131,y=813,color=0x995757},
+	{x=196,y=804,color=0xfdfded},
+	{x=162,y=815,color=0xb63f3f},
+	MainPoint={x=71,y=594},	
+}
+Data['奋笔疾书']={
+	{x=189,y=512,color=0x3769a3},
+	{x=262,y=520,color=0xd987a0},
+	{x=299,y=500,color=0xdbaab2},
+	{x=239,y=538,color=0x4dc1f2},
+	{x=92,y=525,color=0x0a0a12},
+	{x=130,y=501,color=0x375082},
+	MainPoint={x=71,y=294},	
+}
+Data['绘画之夏']={
+	{x=136,y=510,color=0x373740},
+	{x=96,y=507,color=0xc8f9f9},
+	{x=110,y=528,color=0xfdfded},
+	{x=256,y=543,color=0xfddcb3},
+	{x=217,y=518,color=0x484048},
+	MainPoint={x=71,y=590},	
+}
+-->>>>>>>>>>>>>>>>>>Fate/zero 
+Data['觉醒之前']={
+	{x=92,y=537,color=0x375082},
+	{x=150,y=525,color=0x4f4f4f},
+	{x=137,y=525,color=0x484048},
+	{x=217,y=530,color=0x3b3354},
+	{x=254,y=515,color=0x544c9e},
+	{x=283,y=513,color=0x6565a7},
+	MainPoint={x=71,y=292},	
+}
+Data['情窦未开的千金']={
+	{x=183,y=489,color=0xfcfce3},
+	{x=169,y=513,color=0xe5c4ab},
+	{x=113,y=512,color=0xfcfcdb},
+	{x=113,y=509,color=0xfcfcdb},
+	{x=111,y=530,color=0xfcfcdb},
+	{x=301,y=485,color=0x8adc69},
+	{x=247,y=499,color=0xfcfce3},
+	MainPoint={x=71,y=279},	
+}
+Data['月灵髓液']={
+	{x=187,y=484,color=0xfcfce3},
+	{x=128,y=485,color=0xb3160e},
+	{x=129,y=522,color=0xbf4412},
+	{x=152,y=510,color=0xbf4412},
+	{x=241,y=511,color=0xbf4412},
+	{x=249,y=480,color=0xb3160e},
+	MainPoint={x=71,y=273},	
+}
+Data['应至之地']={
+	{x=157,y=524,color=0xef6b4a},
+	{x=262,y=500,color=0xf11a1a},
+	{x=111,y=499,color=0x3b120a},
+	{x=178,y=495,color=0xf21c1c},
+	{x=224,y=523,color=0xfaf265},
+	MainPoint={x=71,y=292},	
+}
+-->>>>>>>>>>>>>>>>>>闪闪祭  
+Data['闪耀于摩天楼之上']={
+	{x=232,y=514,color=0xfcdbcb},
+	{x=249,y=526,color=0xfcdbcb},
+	{x=154,y=523,color=0xcfcfda},
+	{x=275,y=496,color=0xe6e6e9},
+	{x=307,y=506,color=0x0e2869},
+	{x=115,y=528,color=0x3769a3},
+	MainPoint={x=71,y=292},	
+}
+Data['C·k·T']={
+	{x=227,y=796,color=0xdcab92},
+	{x=238,y=821,color=0xe29787},
+	{x=174,y=815,color=0xffe8d8},
+	{x=138,y=802,color=0x95959e},
+	{x=87,y=802,color=0xb34040},
+	{x=155,y=794,color=0x15151d},
+	MainPoint={x=71,y=592},	
+}
+Data['开演时间']={
+	{x=119,y=510,color=0xfdede5},
+	{x=204,y=491,color=0x15151d},
+	{x=184,y=485,color=0xbab2aa},
+	{x=261,y=515,color=0xe0bf9e},
+	{x=224,y=513,color=0xfcdbcb},
+	{x=203,y=481,color=0x14141c},
+	MainPoint={x=71,y=275},	
+}
+Data['复仇战']={
+	{x=218,y=525,color=0xf9c8c8},
+	{x=134,y=499,color=0xfcdbb2},
+	{x=102,y=527,color=0x291952},
+	{x=104,y=542,color=0x8d5ac0},
+	{x=89,y=505,color=0xd84433},
+	MainPoint={x=71,y=292},	
+}
+Data['Gilgamesh in NY']={
+	{x=200,y=813,color=0xdb915f},
+	{x=217,y=816,color=0xf6cf98},
+	{x=276,y=811,color=0x2b232b},
+	{x=307,y=804,color=0xfdfded},
+	{x=111,y=799,color=0xfddcb3},
+	{x=139,y=822,color=0xfddcb4},
+	MainPoint={x=71,y=592},	
+}
+-- Data['']={
 
-
+-- 	MainPoint={x=71,y=590},	
+-- }
 return Data

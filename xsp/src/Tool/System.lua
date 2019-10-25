@@ -139,6 +139,7 @@ self.SystemData.stateTime=os.time()
 tbl.uid,tbl.game=self.SystemData.uid,self.SystemData.game
 local data=json:encode(tbl)
 local url=urlencode("http://47.107.224.60:8282/index.php/home/api/getstate/info/"..data)
+	print(1)
 	if asyncExec~=nil then 
 		asyncExec({
 			type = "httppost",                       
@@ -156,6 +157,7 @@ local url=urlencode("http://47.107.224.60:8282/index.php/home/api/getstate/info/
 				end
 			})
 	end
+	print(2)
 end
 
 

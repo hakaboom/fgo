@@ -209,7 +209,6 @@ function Sequence:run()
 			loopCount=0
 		end
 		for _,v in ipairs(self.scenes) do--遍历scene执行run函数
-		_K:postgamedataToServer({state=v.blackboard:getValue("当前游戏场景")})
 			flag=v:run()
 			if flag then
 				break 
